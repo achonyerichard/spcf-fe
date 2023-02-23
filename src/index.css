@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  font-family: 'Inter', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Navbar Component */
+.nav {
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
+  transition: all 0.5s;
+  z-index: 997;
+  background: transparent;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    background: #FCD733;
+  }
+}
+
+.nav.active {
+  background: #fff;
+}
+
+
+.fixedTop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.dropdown:hover {
+  transition: 0.5s;
+}
+
+.nav .dropdown ul li {
+  min-width: 200px;
+}
+.nav .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #003651;
+}
+.nav .dropdown ul a i {
+  font-size: 12px;
+}
+.nav .dropdown ul a:hover, .nav .dropdown ul .active:hover, .nav .dropdown ul li:hover > a {
+  color: #CCDC;
+}
+.nav .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.nav .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+.nav .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+@media (maxwidth: 400px) {
+  
+  .hidden {
+    display: none;
+  }
+  .hidden a {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  background-color: #fff;
+  position: absolute;
+  width: 90%;
+}
+
+
+/* Career Accordion */
+.accordion label:after {
+  content: '^';
+  position: absolute;
+  right: 1em;
+  color: black;
+  transform: rotate(180deg);
+  font-weight: 400;
+}
+
+.accordion input:checked + label:after {
+  content: '^';
+  line-height: .8em;
+  transform: rotate(0deg);
+}
+
+.accordion__content{
+  max-height: 0em;
+  transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+input[name='panel']:checked ~ .accordion__content {
+  /* Get this as close to what height you expect */
+  max-height: 50em;
+}
+
+
