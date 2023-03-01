@@ -7,6 +7,8 @@ import Contact from "./pages/Contact";
 import Donation from "./pages/Donation";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 
 
@@ -25,6 +27,8 @@ function App() {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/career" element={<Career />} />
       <Route path="/centers" element={<Center />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 }

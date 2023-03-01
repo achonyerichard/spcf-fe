@@ -42,7 +42,7 @@ function Home() {
           >
             <SwiperSlide>
               <div
-                className={`relative h-screen w-full flex items-center bg-[url('../public/img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
+                className={`relative h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
               >
                 <main className=" sm:px-6  z-10 max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                   <div className="  lg:w-1/2 ">
