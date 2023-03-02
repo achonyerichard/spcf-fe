@@ -1,25 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from "react";
 
 // import './App.css'
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-// import "./styles.css";
-import { FaBook, FaExchangeAlt, FaEye, FaFistRaised, FaFlagUsa, FaGlobe, FaGlobeAfrica, FaGlobeAmericas, FaPeopleArrows, FaRegHandshake, FaRunning, FaVoteYea } from "react-icons/fa";
-import { BiDonateHeart } from "react-icons/bi";
-import { MdFormatListBulleted, MdSettingsVoice } from "react-icons/md";
-import { AiOutlineRise } from "react-icons/ai";
-// import required modules
-import { Pagination, Navigation, Autoplay, } from "swiper"
-import Nav from '../../components/navigation/Navigation';
+import { Pagination, Navigation, Autoplay } from "swiper";
+import Nav from "../../components/navigation/Navigation";
 import Footer from "../../components/footer";
 
 function Home() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
@@ -32,17 +31,57 @@ function Home() {
             pagination={{
               clickable: true,
             }}
-            slidesPerGroup={3}
+            navigation={true}
             autoplay={{
               delay: 7000,
               disableOnInteraction: false,
             }}
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
             <SwiperSlide>
               <div
-                className={`relative h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
+                className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
+              >
+                <main className=" sm:px-6  z-10 max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+                  <div className="  lg:w-1/2 ">
+                    <h2 className="lg:text-8xl tracking-tight leading-10 font-bold  text-left text-HomeWhite sm:leading-none text-3xl md:text-[53px] ">
+                      Join Hands To Make The Lives of An{" "}
+                      <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
+                      Counts
+                    </h2>
+                    <div className="lg:w-1/2 flex justify-end lg:hidden ">
+                      <img
+                        alt="Hero Imge"
+                        src={"/img/hero-slide-1.png"}
+                        className="object-cover lg:w-[544px] lg:h-[489px]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+                      />
+                    </div>
+                    <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 animate-typing">
+                      Lets make the world a better place by contributing to the
+                      lives of the needy in little ways.
+                    </p>
+                    <div className="mt-5 sm:mt-8">
+                      <div className="rounded-md ">
+                        <button className="w-[186px] h-[48px] flex items-center justify-center px-8 py-3  text-appWhite text-base leading-6 font-regular rounded-md text-white bg-[#FF8B1F] transition duration-150 ease-in-out md:py-4 md:px-10">
+                          Get started
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:w-1/2 lg:flex justify-end hidden">
+                    <img
+                      alt="Hero Imge"
+                      src={"/img/hero-slide-1.png"}
+                      className="object-cover lg:w-[544px] lg:h-[489px] "
+                    />
+                  </div>
+                </main>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
               >
                 <main className=" sm:px-6  z-10 max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                   <div className="  lg:w-1/2 ">
@@ -52,26 +91,21 @@ function Home() {
                       Counts
                     </h2>
                     <div className="lg:w-1/2 flex justify-end lg:hidden">
-                    <img
-                      alt="Hero Imge"
-                      src={"/img/hero-slide-1.png"}
-                      className="object-cover lg:w-[544px] lg:h-[489px] "
-                    />
-                  </div>
+                      <img
+                        alt="Hero Imge"
+                        src={"/img/hero-slide-1.png"}
+                        className="object-cover lg:w-[544px] lg:h-[489px] "
+                      />
+                    </div>
                     <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 ">
                       Lets make the world a better place by contributing to the
                       lives of the needy in little ways.
                     </p>
                     <div className="mt-5 sm:mt-8">
-                      <div className="rounded-md shadow">
-                        <Link href="auth/login">
-                          <button
-                            href="#"
-                            className="w-[186px] h-[48px] flex items-center justify-center px-8 py-3  text-appWhite text-base leading-6 font-regular rounded-md text-white bg-[#FF8B1F] transition duration-150 ease-in-out md:py-4 md:px-10"
-                          >
-                            Get started
-                          </button>
-                        </Link>
+                      <div className="rounded-md ">
+                        <button className="w-[186px] h-[48px] flex items-center justify-center px-8 py-3  text-appWhite text-base leading-6 font-regular rounded-md text-white bg-[#FF8B1F] transition duration-150 ease-in-out md:py-4 md:px-10">
+                          Get started
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -193,7 +227,11 @@ function Home() {
                 </div>
               </div>
               <div className="lg:flex gap-y-2 px-4 gap-8 items-center justify-center  font-medium container mx-auto pt-20">
-                <div className=" px-4 bg-white rounded-lg shadow-lg lg:w-1/4 pb-20">
+                <div
+                  className=" px-4 bg-white rounded-lg shadow-lg lg:w-1/4 pb-20"
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
+                >
                   <div className="flex flex-col  items-center justify-center mb-6">
                     <div className="text-gray-900 mb-2 p-3 w-[70px] h-[70px] shadow-lg rounded-full bg-[#FFFAE6] inline-flex items-center justify-center bg-appOrange">
                       <img
@@ -218,7 +256,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className=" px-4 bg-white rounded-lg shadow-lg lg:w-1/4 pb-20">
+                <div
+                  className=" px-4 bg-white rounded-lg shadow-lg lg:w-1/4 pb-20"
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
+                >
                   <div className="flex flex-col  items-center justify-center mb-6">
                     <div className="text-gray-900 mb-2 p-3 w-[70px] h-[70px] shadow-lg rounded-full bg-[#FFFAE6] inline-flex items-center justify-center bg-appOrange">
                       <img
@@ -243,7 +285,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className=" px-4 bg-white rounded-lg shadow-lg lg:w-1/4 pb-20">
+                <div
+                  className=" px-4 bg-white rounded-lg shadow-lg lg:w-1/4 pb-20"
+                  data-aos="fade-left"
+                  data-aos-duration="3000"
+                >
                   <div className="flex flex-col  items-center justify-center mb-6">
                     <div className="text-gray-900 mb-2 p-3 w-[70px] h-[70px] shadow-lg rounded-full bg-[#EBFDE6] inline-flex items-center justify-center bg-appOrange">
                       <img
@@ -268,7 +314,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className=" px-4 bg-white rounded-lg shadow-lg lg:w-1/4 pb-20">
+                <div
+                  className=" px-4 bg-white rounded-lg shadow-lg lg:w-1/4 pb-20"
+                  data-aos="fade-left"
+                  data-aos-duration="3000"
+                >
                   <div className="flex flex-col  items-center justify-center mb-6">
                     <div className="text-gray-900 mb-2 p-3 w-[70px] h-[70px] shadow-lg rounded-full bg-[#FFFAE6] inline-flex items-center justify-center bg-appOrange">
                       <img
@@ -301,7 +351,11 @@ function Home() {
               <div>
                 <img src={"/img/hero-2.png"} alt="What's happening" />
               </div>
-              <div className="my-8 lg:flex lg:flex-col  -center lg:w-4/5">
+              <div
+                className="my-8 lg:flex lg:flex-col  -center lg:w-4/5 "
+                data-aos="zoom-in-up"
+                data-aos-duration="3000"
+              >
                 <span>
                   <p
                     className="text-sm font-bold leading-relaxed m-4 text-[#FF8B1F]
@@ -332,7 +386,11 @@ function Home() {
           </section>
           <section className="bg-white p-8 lg:px-40 w-full lg:mt-28">
             <div className="flex flex-col items-center lg:max-w-[1920px] lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8">
-              <div className="my-8 lg:flex lg:flex-col  -center lg:w-4/5">
+              <div
+                className="my-8 lg:flex lg:flex-col  -center lg:w-4/5"
+                data-aos-duration="3000"
+                data-aos="zoom-in-down"
+              >
                 <h2 className="text-[#2C2917] text-left font-semibold text-3xl md:text-6xl">
                   <span className="text-[#FBCF09]">Children</span> are a key
                   player to sustainable growth.
@@ -362,7 +420,12 @@ function Home() {
             >
               <div className="absolute top-0 right-0 bottom-0 left-0  backdrop-brightness-50"></div>
 
-              <main className="px-4 sm:px-6 lg:px-8 z-10">
+              <main
+                className="px-4 sm:px-6 lg:px-8 z-10"
+                data-aos="zoom-out-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
                 <div className="text-center py-20 flex flex-col justify-center">
                   <p className="mt-3 text-[#FBCF09] sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5 lg:w-2/3 pb-5">
                     We are committed in reaching to feed thousands of
@@ -397,13 +460,14 @@ function Home() {
           <section className="py-8 lg:px-40 mb-20 px-4">
             <div className="flex flex-col justify-center items-center mb-6 ">
               <span>
-                <p
-                  className="text-md font-bold leading-relaxed pb-2 text-[#FF8B1F] "
-                >
+                <p className="text-md font-bold leading-relaxed pb-2 text-[#FF8B1F] ">
                   Our Gallery
                 </p>
               </span>
-              <p className='text-lg text=[#605B47] text-center'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
+              <p className="text-lg text=[#605B47] text-center">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint.{" "}
+              </p>
             </div>
             <div className="flex flex-wrap -mx-4 -mb-8">
               <div className="md:w-1/4 px-4 mb-8">
@@ -471,4 +535,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

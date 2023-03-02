@@ -8,6 +8,7 @@ import Donation from "./pages/Donation";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Otp from "./pages/Otp";
 import Register from "./pages/Register";
 
 
@@ -29,6 +30,7 @@ function App() {
       <Route path="/centers" element={<Center />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/otp" element={<Otp />} />
     </Routes>
   );
 }

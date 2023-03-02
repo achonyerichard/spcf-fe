@@ -115,3 +115,25 @@ input[name='panel']:checked ~ .accordion__content {
 }
 
 
+.phone-container input{
+   background-color: white;
+   color: black;
+
+  padding: 10px;
+   border: 1px solid #DCDEDD;
+}
+
+.phone-container input:focus{
+
+  border: 1px solid #DCDEDD;
+}
+.phone-container select{
+    background-color: #fff;
+    color: black;
+    scrollbar-color: white;
+    border: 1px solid #DCDEDD;
+   
+}
+.inputStyle{
+    background-color: #fff;
+}
