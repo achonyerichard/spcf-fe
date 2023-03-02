@@ -201,12 +201,19 @@ const Navigation = () => {
                   </Link>
                 </li>
                 <li className={"lg:text-xl "}>
+                  <Link to={"/donation"}>
+                    <a>Soup Kitchen</a>
+                  </Link>
+                </li>
+                <li className={"lg:text-xl "}>
                   <button className="text-white lg:p-2 bg-[#FF8B1F] lg:rounded-[5px] lg:w-[180px] lg:h-[60px] lg:text-xl">
-                    <span className="hover:underline">
-                      <Link href={"/login"}>Soup Kitchen</Link>
-                    </span>
-                   
-                   
+                  <span className="hover:underline">
+                    <Link href={"/auth/login"}>Login</Link>
+                  </span>
+                  /
+                  <span className="hover:underline">
+                    <Link href={"/register"}>Register</Link>
+                  </span>
                   </button>
                 </li>
               </ul>
