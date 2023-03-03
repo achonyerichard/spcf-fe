@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
   const [step, setStep] = useState(1);
+  const navigate = useNavigate()
 
   const nextStep = () => {
     setStep(step + 1);
@@ -111,7 +112,7 @@ const ForgotPassword = () => {
                     className="block  tracking-wide text-gray-700 text-lg font-medium mb-2"
                     htmlFor="grid-first-name"
                   >
-                    Confirm Password
+                     Password
                   </label>
                   <div className="relative">
                     <input
@@ -138,7 +139,7 @@ const ForgotPassword = () => {
                     className="block  tracking-wide text-gray-700 text-lg font-medium mb-2"
                     htmlFor="grid-first-name"
                   >
-                    Password
+                  Confirm  Password
                   </label>
                   <div className="relative">
                     <input
@@ -188,7 +189,7 @@ const ForgotPassword = () => {
                   Password have been changed to your desired password. Kindly keep it private.
                    
                   </p>
-                  <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300 w-full mt-10">
+                  <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300 w-full mt-10" onClick={()=>{navigate('/login')}}>
                     Go to Login
                   </button>
                 </div>

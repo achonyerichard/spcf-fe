@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Onboarding from "./pages/Onboarding";
 import Otp from "./pages/Otp";
 import Register from "./pages/Register";
 
@@ -33,6 +34,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/otp" element={<Otp />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/onboarding" element={<Onboarding />} />
     </Routes>
   );
 }
