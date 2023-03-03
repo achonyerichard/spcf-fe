@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -56,7 +57,7 @@ const Login = () => {
                 </svg>
                 
             <div className=" text-md  pt-2 text-[#908D7E] flex justify-end">
-              <a href="#">Forgot your password?</a>
+              <Link to="/forgot-password">Forgot your password?</Link>
             </div>
               </div>
               <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300">

@@ -5,6 +5,7 @@ import Career from "./pages/Career";
 import Center from "./pages/Center";
 import Contact from "./pages/Contact";
 import Donation from "./pages/Donation";
+import ForgotPassword from "./pages/ForgotPassword";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -31,6 +32,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/otp" element={<Otp />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
     </Routes>
   );
 }

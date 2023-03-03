@@ -1,13 +1,6 @@
 import React, { Fragment,useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 
-
-
-import { AiOutlineClose, AiOutlineLogout } from 'react-icons/ai'
-
-
-import { FaBlog, FaHome, FaUser } from 'react-icons/fa'
-import { BiDonateHeart, BiUserVoice } from 'react-icons/bi'
 import { BsFillQuestionCircleFill, BsPlusLg } from 'react-icons/bs'
 
 
@@ -208,11 +201,11 @@ const Navigation = () => {
                 <li className={"lg:text-xl "}>
                   <button className="text-white lg:p-2 bg-[#FF8B1F] lg:rounded-[5px] lg:w-[180px] lg:h-[60px] lg:text-xl">
                   <span className="hover:underline">
-                    <Link href={"/auth/login"}>Login</Link>
+                    <Link to={"/login"}>Login</Link>
                   </span>
                   /
                   <span className="hover:underline">
-                    <Link href={"/register"}>Register</Link>
+                    <Link to={"/register"}>Register</Link>
                   </span>
                   </button>
                 </li>
