@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import flags from 'country-flag-icons/react/3x2'
+import { Link } from "react-router-dom";
 
 const Register = () => {
     const [phonevalue, setPhoneValue] = useState("");
@@ -136,7 +137,7 @@ const Register = () => {
           <div className=" text-md flex justify-center items-center text-black">
             <p className="font-medium">
               You  have an account?
-              <span className="text-[#FF8B1F]"> Sign Up</span>
+            <Link to="/login"> <span className="text-[#FF8B1F]"> Sign In</span></Link> 
             </p>
           </div>
         </div>
