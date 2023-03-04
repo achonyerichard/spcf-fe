@@ -9,6 +9,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import News from "./pages/News";
+import NewsDetails from "./pages/News/newsDetails";
 import Onboarding from "./pages/Onboarding";
 import Otp from "./pages/Otp";
 import Register from "./pages/Register";
@@ -35,6 +37,8 @@ function App() {
       <Route path="/otp" element={<Otp />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/onboarding" element={<Onboarding />} />
+      <Route path="/news" element={<News />} />
+      <Route path="/news/:id" element={<NewsDetails />} />
     </Routes>
   );
 }

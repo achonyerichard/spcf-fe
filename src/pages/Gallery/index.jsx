@@ -1,20 +1,6 @@
 import { useState } from 'react'
 
-// import './App.css'
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from 'react-router-dom';
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
-// import "./styles.css";
-import { FaBook, FaExchangeAlt, FaEye, FaFistRaised, FaFlagUsa, FaGlobe, FaGlobeAfrica, FaGlobeAmericas, FaPeopleArrows, FaRegHandshake, FaRunning, FaVoteYea } from "react-icons/fa";
-import { BiDonateHeart } from "react-icons/bi";
-import { MdFormatListBulleted, MdSettingsVoice } from "react-icons/md";
-import { AiOutlineRise } from "react-icons/ai";
-// import required modules
-import { Pagination, Navigation, Autoplay, } from "swiper"
 import Nav from '../../components/navigation/Navigation';
 import Footer from "../../components/footer";
 

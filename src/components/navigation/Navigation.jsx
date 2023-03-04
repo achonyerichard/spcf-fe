@@ -112,7 +112,7 @@ const Navigation = () => {
                   </ul>
                 </li>
                 <li className={"lg:text-xl "}>
-                  <Link to={"/about"}>
+                  <Link to={"/news"}>
                     <a>News </a>
                   </Link>
                 </li>
