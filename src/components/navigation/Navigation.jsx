@@ -59,7 +59,7 @@ const Navigation = () => {
             <div className="hidden lg:flex lg:w-full lg:px-14  justify-end items-center ">
               {" "}
               {/* lg:px-48 */}
-              <ul className="text-[#3F3A21] font-medium lg:flex items-center justify-center gap-8">
+              <ul className="text-[#3F3A21] font-medium lg:flex items-center justify-center  space-x-6">
                 <li className={"lg:text-lg cursor-pointer"}>
                   <p
                     className="flex dropdown-toggle items-center whitespace-nowrap peer"
