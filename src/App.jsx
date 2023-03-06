@@ -14,6 +14,7 @@ import NewsDetails from "./pages/News/newsDetails";
 import Onboarding from "./pages/Onboarding";
 import Otp from "./pages/Otp";
 import Register from "./pages/Register";
+import SuperMarket from "./pages/Supermarket";
 
 
 
@@ -38,6 +39,7 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/onboarding" element={<Onboarding />} />
       <Route path="/news" element={<News />} />
+      <Route path="/supermarket" element={<SuperMarket />} />
       <Route path="/news/:id" element={<NewsDetails />} />
     </Routes>
   );

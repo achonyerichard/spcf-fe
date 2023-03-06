@@ -103,7 +103,7 @@ function News() {
                       </p>
                     </div>
                     <div className="px-6 py-4 flex flex-row items-center justify-end">
-                      <a href={`news/${news?.id}`}>
+                      <Link to={`/news/${news?.id}`}>
                         <span
                           href="#"
                           className="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center"
@@ -112,7 +112,7 @@ function News() {
 
                           <span className="ml-1 text-[#FBCF09]">View</span>
                         </span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}

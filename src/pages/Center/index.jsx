@@ -63,7 +63,7 @@ function Center() {
                   <input
                     id="twitter"
                     type="text"
-                    className="appearance-none  px-3 py-4 block w-full  text-base text-appBlack bg-[#F5F5F5] border border-gray-400  focus:bg-white peer relative h-10 leading-tight focus:outline-none   pl-8 pr-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg"
+                    className="appearance-none  px-3 py-4 block w-full  text-base text-appBlack bg-[#F5F5F5]  focus:bg-white peer relative h-10 leading-tight focus:outline-none   pl-8 pr-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out  focus:drop-shadow-lg"
                   />
                   <span className="flex items-center material-symbols-outlined absolute left-2 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
                     {" "}

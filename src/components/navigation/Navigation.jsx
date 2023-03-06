@@ -179,7 +179,7 @@ const Navigation = () => {
                 </li>
 
                 <li className={"lg:text-xl "}>
-                  <Link to={"/donate"}>
+                  <Link to={"/supermarket"}>
                     <a>Supermarket</a>
                   </Link>
                 </li>
