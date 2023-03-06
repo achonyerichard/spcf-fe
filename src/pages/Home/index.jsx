@@ -45,7 +45,7 @@ function Home() {
               >
                 <main className=" sm:px-6  z-10 max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                   <div className="  lg:w-1/2 ">
-                    <h2 className="lg:text-8xl tracking-tight leading-10 font-bold  text-left text-HomeWhite sm:leading-none text-3xl md:text-[53px] ">
+                    <h2 className="lg:text-7xl tracking-tight leading-10 font-bold  text-left text-HomeWhite sm:leading-none text-3xl md:text-[53px] ">
                       Join Hands To Make The Lives of An{" "}
                       <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
                       Counts

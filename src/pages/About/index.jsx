@@ -47,7 +47,7 @@ function About() {
                   lives of the needy in little ways.
                 </p>
                 <div className="mt-5 sm:mt-8">
-                  <div className="rounded-md shadow">
+                  <div className="rounded-md ">
                     <Link href="auth/login">
                       <button
                         href="#"

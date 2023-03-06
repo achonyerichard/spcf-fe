@@ -59,8 +59,8 @@ const Navigation = () => {
             <div className="hidden lg:flex lg:w-full lg:px-14  justify-end items-center ">
               {" "}
               {/* lg:px-48 */}
-              <ul className="text-[#3F3A21] font-medium lg:flex items-center justify-center gap-12">
-                <li className={"lg:text-xl cursor-pointer"}>
+              <ul className="text-[#3F3A21] font-medium lg:flex items-center justify-center gap-8">
+                <li className={"lg:text-lg cursor-pointer"}>
                   <p
                     className="flex dropdown-toggle items-center whitespace-nowrap peer"
                     type="button"
@@ -102,7 +102,7 @@ const Navigation = () => {
                     <li>
                       <Link
                         to="/gallery"
-                        className=" dropdown-item text-lgO py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100
+                        className=" dropdown-item text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100
             "
                         href="#"
                       >
@@ -178,28 +178,28 @@ const Navigation = () => {
                   </ul>
                 </li>
 
-                <li className={"lg:text-xl "}>
+                <li className={"lg:text-lg "}>
                   <Link to={"/supermarket"}>
                     <a>Supermarket</a>
                   </Link>
                 </li>
-                <li className={"lg:text-xl "}>
+                <li className={"lg:text-lg "}>
                   <Link to={"/contact"}>
                     <a>Contact Us</a>
                   </Link>
                 </li>
-                <li className={"lg:text-xl "}>
+                <li className={"lg:text-lg "}>
                   <Link to={"/donation"}>
                     <a>Donate</a>
                   </Link>
                 </li>
-                <li className={"lg:text-xl "}>
+                <li className={"lg:text-lg "}>
                   <Link to={"/donation"}>
                     <a>Soup Kitchen</a>
                   </Link>
                 </li>
-                <li className={"lg:text-xl "}>
-                  <button className="text-white lg:p-2 bg-[#FF8B1F] lg:rounded-[5px] lg:w-[180px] lg:h-[60px] lg:text-xl">
+                <li className={"lg:text-lg "}>
+                  <button className="text-white lg:p-2 bg-[#FF8B1F] lg:rounded-[5px] lg:w-[180px] lg:h-[60px] lg:text-lg">
                   <span className="hover:underline">
                     <Link to={"/login"}>Login</Link>
                   </span>
@@ -218,7 +218,7 @@ const Navigation = () => {
             <Link href="/" className="outline-none mobile-menu-button">
               <a onClick={handleHamburger}>
                 {isActive ? (
-                  <AiOutlineClose className="text-[#3F3A21] text-xl" />
+                  <AiOutlineClose className="text-[#3F3A21] text-lg" />
                 ) : (
                   <svg
                     className={` w-6 h-6 text-[#2C2917] hover:text-blue-900 `}

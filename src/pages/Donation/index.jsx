@@ -66,7 +66,7 @@ function Donation() {
                   type="text"
                   id="twitter"
                   name="twitter"
-                  placeholder="Put in your fullname."
+                  placeholder="Email Address"
                   className=" shadow p-3 w-full rounded mb- bg-[#EEEEEE]"
                 />
               </div>
@@ -75,7 +75,7 @@ function Donation() {
                   type="text"
                   id="twitter"
                   name="twitter"
-                  placeholder="Put in your fullname."
+                  placeholder="Amount"
                   className=" shadow p-3 w-full rounded mb- bg-[#EEEEEE]"
                 />
               </div>
