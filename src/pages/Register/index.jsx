@@ -133,7 +133,7 @@ const Register = () => {
                   </p>
                 </label>
               </div>
-              <Link to="/onboarding" className="w-full">
+              <Link to="/otp" className="w-full">
                 <button className="bg-[#FF8B1F] w-full rounded-3xl text-white py-3 hover:scale-105 duration-300">
                   Create Account
                 </button>

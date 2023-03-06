@@ -8,7 +8,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import getProducts from "../../data/productsData";
 
 const SuperMarket = () => {
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const copyData = getProducts();
@@ -45,8 +45,8 @@ const SuperMarket = () => {
         </section>
         <section className="mb-20">
           <div className="md:px-20 px-4">
-            <div className="md:flex items-center ">
-              <div className="md:w-1/3">
+            <div className="md:flex items-center gap-y-3 ">
+              <div className="md:w-1/3 md:block hidden">
                 <h1 className="text-2xl text-black font-bold">Categories</h1>
               </div>
               <div className="md:w-2/3 justify-end flex">
@@ -104,10 +104,13 @@ const SuperMarket = () => {
                 /> */}
                 </div>
               </div>
+              <div className="md:w-1/3 lg:hidden block">
+                <h1 className="text-2xl text-black font-bold">Categories</h1>
+              </div>
             </div>
             <div className="w-full max-w-[1920px]  mx-auto ">
-              <div className="text-appBlack lg:flex justify-center  lg:gap-4 pt-10">
-                <div className="hidden lg:block  w-1/5">
+              <div className="text-appBlack lg:flex justify-center  lg:gap-4 lg:pt-10 pt-5">
+                <div className=" block  md:w-1/5">
                   <div className=" lg:border-gray-200 border lg:h-auto  ">
                     <div className="flex justify-center">
                       <ul className="w-full divide-y divide-gray-200 ">
@@ -159,7 +162,7 @@ const SuperMarket = () => {
                             </div>
                           </div>
                         </li>
-                        <li className="md:py-5  px-5">
+                        <li className="md:py-5 py-4  px-5">
                           <div className="flex items-center space-x-4">
                             <div className="flex-1 min-w-0">
                               <p className="text-xl text-gray-500 truncate dark:text-gray-400">
@@ -171,7 +174,7 @@ const SuperMarket = () => {
                             </div>
                           </div>
                         </li>
-                        <li className="md:py-5  px-5">
+                        <li className="md:py-5 py-4  px-5">
                           <div className="flex items-center space-x-4">
                             <div className="flex-1 min-w-0">
                               <p className="text-xl text-gray-500 truncate dark:text-gray-400">
@@ -186,45 +189,190 @@ const SuperMarket = () => {
                       </ul>
                     </div>
                   </div>
-                  <div></div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-5  md:gap-8 md:w-4/5">
-                 {data.map((product)=>(
-                    <div className="flex-shrink-0  relative overflow-hidden bg-white rounded-lg shadow-sm border border-gray-200">
-                    <div className="relative pt-5 px-10 flex items-center justify-center">
-                      <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"></div>
-                      <img
-                        className="relative w-40 object-fit"
-                        src="img/banana.png"
-                        alt="Product Image"
-                      />
-                    </div>
-                    <div className="relative text-white px-6  mt-6">
-                      <div className="flex justify-center">
-                        <span className="px-3 text-lg opacity-75 -mb-1 text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
-                          {product?.category}
-                        </span>
-                        
+                  <div className="pt-5">
+                    <h1 className="text-xl text-black">Filter</h1>
+                    <p className="text-md text-[#908D7E] pt-3">Price</p>
+                    <div className=" grid grid-cols-3   lg:grid-cols-3 gap-2   items-center pt-3">
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio1"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                          
+                        />
+                        <label
+                          for="radio1"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                         $2.00
+                        </label>
                       </div>
-                      <div className="flex justify-center pt-5">
-                        <span className=" text-2xl  text-center text-black  ">
-                          {product?.name}
-                        </span>
-                        
+
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio2"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                        />
+                        <label
+                          for="radio2"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4  bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                        $5.00
+                        </label>
                       </div>
-                      <div className="flex justify-between items-center pt-3">
-                        <span className="block font-semibold text-xl text-black">
-                        {product?.price}
-                        </span>
-                        <span>  <AiOutlineHeart className="text-3xl text-black" /></span>
-                        <span className=" bg-white rounded-full  text-xs font-bold px-3 py-2 leading-none flex items-center">
-                         <BsCart3  className="text-3xl text-black" />
-                        </span>
+
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio3"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                        />
+                        <label
+                          for="radio3"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                         $7.00
+                        </label>
+                      </div>
+
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio4"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                        />
+                        <label
+                          for="radio4"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                         $8.00
+                        </label>
+                      </div>
+
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio5"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                        />
+                        <label
+                          for="radio5"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                        $9.99
+                        </label>
+                      </div>
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio5"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                        />
+                        <label
+                          for="radio5"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                        $10.00
+                        </label>
+                      </div>
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio5"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                        />
+                        <label
+                          for="radio5"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                        $11.00
+                        </label>
+                      </div>
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio5"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                        />
+                        <label
+                          for="radio5"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                        $12.00
+                        </label>
+                      </div>
+                      <div className="flex items-center mb-4">
+                        <input
+                          id="radio5"
+                          type="radio"
+                          name="radio"
+                          className="hidden"
+                        />
+                        <label
+                          for="radio5"
+                          className="flex items-center cursor-pointer"
+                        >
+                          <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
+                        $15.00
+                        </label>
                       </div>
                     </div>
                   </div>
-                 )) }
-                
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 pt-10  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5">
+                  {data.map((product) => (
+                    <div className="flex-shrink-0  relative overflow-hidden bg-white rounded-lg shadow-sm border border-gray-200">
+                      <div className="relative pt-5 px-10 flex items-center justify-center">
+                        <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"></div>
+                        <img
+                          className="relative w-40 object-fit"
+                          src="img/banana.png"
+                          alt="Product Image"
+                        />
+                      </div>
+                      <div className="relative text-white px-6  mt-6">
+                        <div className="flex justify-center">
+                          <span className="px-3 text-lg opacity-75 -mb-1 text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
+                            {product?.category}
+                          </span>
+                        </div>
+                        <div className="flex justify-center pt-5">
+                          <span className=" text-2xl  text-center text-black  ">
+                            {product?.name}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center pt-3">
+                          <span className="block font-semibold text-xl text-black">
+                            {product?.price}
+                          </span>
+                          <span>
+                            {" "}
+                            <AiOutlineHeart className="text-3xl text-black" />
+                          </span>
+                          <span className=" bg-white rounded-full  text-xs font-bold px-3 py-2 leading-none flex items-center">
+                            <BsCart3 className="text-3xl text-black" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

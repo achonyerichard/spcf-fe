@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Otp = () => {
   const [success, setSuccess] = useState(false);
@@ -41,7 +42,7 @@ const Otp = () => {
                     maxlength="1"
                   />
                 </div>
-                <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300">
+                <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300" onClick={()=>setSuccess(true)}>
                   Submit
                 </button>
               </form>
@@ -66,9 +67,13 @@ const Otp = () => {
                 <span className="text-[#FBCF09]">SPCF feeding</span> scheme. You
                 will be notified on your next process.
               </p>
+              <Link to="/onboarding">
+              
+             
               <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300 w-full mt-10">
               Proceed to Dashboard
             </button>
+            </Link>
             </div>
            
           </div>
