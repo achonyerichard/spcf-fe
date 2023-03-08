@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media(max-height:800px){
+  body{
+    zoom:.85
+  }
+}
+
 body{
   font-family: 'Inter', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;

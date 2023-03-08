@@ -1,18 +1,14 @@
-import React, { Fragment,useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { BsFillQuestionCircleFill, BsPlusLg } from 'react-icons/bs'
-
-
-
+import { BsFillQuestionCircleFill, BsPlusLg } from "react-icons/bs";
 
 const Navigation = () => {
   const [isActive, setIsActive] = useState(false);
   const [nav, setNav] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false)
-  const [about, setAbout] = useState(false)
-  const [services, setServices] = useState(false)
-
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [about, setAbout] = useState(false);
+  const [services, setServices] = useState(false);
 
   // hamburger toggle
   const handleHamburger = (e) => {
@@ -20,20 +16,17 @@ const Navigation = () => {
     setIsActive(!isActive);
   };
 
-  if(typeof window !== 'undefined') {
-
+  if (typeof window !== "undefined") {
     const changeBackground = () => {
-      if(window.scrollY >= 80) {
-        setNav(true)
+      if (window.scrollY >= 80) {
+        setNav(true);
       } else {
-        setNav(false)
+        setNav(false);
       }
-    }
+    };
 
-    window.addEventListener('scroll', changeBackground)
+    window.addEventListener("scroll", changeBackground);
   }
-
-
 
   return (
     <nav
@@ -48,11 +41,24 @@ const Navigation = () => {
           <div className="flex lg:justify-between lg:items-center lg:w-full">
             <div className="">
               <Link to={"/"}>
-                <img
-                  // src={logo}
-                  src={"/img/logo.png"}
-                  alt=" Logo"
-                />
+                {nav ? (
+                  <div className={`flex flex-col items-center justify-center ${nav && "transition-all ease-in-out duration-300"} `}>
+                    <img
+                      // src={logo}`
+                      className="w-10 h-12"
+                      src={"/img/logo2.png"}
+                      alt=" Logo"
+                    />
+                    <h1 className="text-black font-semibold text-xl">SPCF</h1>
+                  </div>
+                ) : (
+                  <img
+                    // src={logo}
+
+                    src={"/img/logo.png"}
+                    alt=" Logo"
+                  />
+                )}
               </Link>
             </div>
 
@@ -200,13 +206,13 @@ const Navigation = () => {
                 </li>
                 <li className={"lg:text-lg "}>
                   <button className="text-white lg:p-2 bg-[#FF8B1F] lg:rounded-[5px] lg:w-[180px] lg:h-[60px] lg:text-lg">
-                  <span className="hover:underline">
-                    <Link to={"/login"}>Login</Link>
-                  </span>
-                  /
-                  <span className="hover:underline">
-                    <Link to={"/register"}>Register</Link>
-                  </span>
+                    <span className="hover:underline">
+                      <Link to={"/login"}>Login</Link>
+                    </span>
+                    /
+                    <span className="hover:underline">
+                      <Link to={"/register"}>Register</Link>
+                    </span>
                   </button>
                 </li>
               </ul>
@@ -292,7 +298,13 @@ const Navigation = () => {
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
                 </svg>
               </span>
-              <div className={about ? `pl-5 block transition-opacity ease-in duration-300` : `hidden ease-out `}>
+              <div
+                className={
+                  about
+                    ? `pl-5 block transition-opacity ease-in duration-300`
+                    : `hidden ease-out `
+                }
+              >
                 <p
                   onClick={() => setIsActive(false)}
                   className="flex items-center space-x-2 py-2 px-4 transition duration-200  text-[#2C2917] group"
@@ -301,8 +313,8 @@ const Navigation = () => {
                     to="/about"
                     className="flex items-center gap-2 text-sm px-2 py-4  transition text-[#2C2917] duration-300"
                   >
-                    <BsPlusLg className='text-lg rotate-45'/>
-                    <p className="text-2xl font-medium">What we  do</p>
+                    <BsPlusLg className="text-lg rotate-45" />
+                    <p className="text-2xl font-medium">What we do</p>
                   </Link>
                 </p>
                 <p
@@ -313,7 +325,7 @@ const Navigation = () => {
                     to="/gallery"
                     className="flex items-center gap-2 text-sm px-2 py-4  transition text-[#2C2917] duration-300"
                   >
-                    <BsPlusLg className='text-lg rotate-45'/>
+                    <BsPlusLg className="text-lg rotate-45" />
                     <p className="text-2xl font-medium">Gallery</p>
                   </Link>
                 </p>
@@ -345,7 +357,13 @@ const Navigation = () => {
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
                 </svg>
               </span>
-              <div className={services ? `pl-5 block transition-opacity ease-in duration-300` : `hidden ease-out `}>
+              <div
+                className={
+                  services
+                    ? `pl-5 block transition-opacity ease-in duration-300`
+                    : `hidden ease-out `
+                }
+              >
                 <p
                   onClick={() => setIsActive(false)}
                   className="flex items-center space-x-2 py-2 px-4 transition duration-200  text-[#2C2917] group"
@@ -354,7 +372,7 @@ const Navigation = () => {
                     to="/career"
                     className="flex items-center gap-2 text-sm px-2 py-4  transition text-[#2C2917] duration-300"
                   >
-                    <BsPlusLg className='text-lg rotate-45'/>
+                    <BsPlusLg className="text-lg rotate-45" />
                     <p className="text-2xl font-medium">Job Vacancies</p>
                   </Link>
                 </p>
@@ -366,7 +384,7 @@ const Navigation = () => {
                     to="/centers"
                     className="flex items-center gap-2 text-sm px-2 py-4  transition text-[#2C2917] duration-300"
                   >
-                    <BsPlusLg className='text-lg rotate-45'/>
+                    <BsPlusLg className="text-lg rotate-45" />
                     <p className="text-2xl font-medium">SPCF Centers</p>
                   </Link>
                 </p>
@@ -390,7 +408,6 @@ const Navigation = () => {
                   to="/contact"
                   className="flex items-center text-sm px-2 py-4  transition text-[#2C2917] duration-300"
                 >
-                  
                   <p className="text-2xl font-medium">Contact</p>
                 </Link>
               </p>
@@ -458,6 +475,6 @@ const Navigation = () => {
       )}
     </nav>
   );
-}
+};
 
-export default Navigation
+export default Navigation;
