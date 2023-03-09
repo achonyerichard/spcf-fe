@@ -24,9 +24,9 @@ function Home() {
     <>
       <Nav />
       <main>
-        <div className="w-full">
+     
           <Swiper
-            spaceBetween={30}
+ 
             centeredSlides
             pagination={{
               clickable: true,
@@ -41,9 +41,9 @@ function Home() {
           >
             <SwiperSlide>
               <div
-                className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
+                className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed bg-no-repeat  `}
               >
-                <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+                <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                   <div className="  lg:w-1/2 ">
                     <h2 className="lg:text-7xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-3xl md:text-[53px] ">
                       Join Hands To Make The Lives of An{" "}
@@ -81,9 +81,9 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
+                className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  bg-no-repeat `}
               >
-                <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+                <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                   <div className="  lg:w-1/2 ">
                     <h2 className="lg:text-8xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-3xl md:text-[53px] ">
                       Join Hands To Make The Lives of An{" "}
@@ -119,88 +119,7 @@ function Home() {
                 </main>
               </div>
             </SwiperSlide>
-            {/* <SwiperSlide>
-              <div
-                className={`relative h-screen w-full flex items-center justify-center text-center bg-cover bg-center  bg-[url("../public/hero2.png")]  `}
-              >
-                <div className="absolute top-0 right-0 bottom-0 left-0  backdrop-brightness-50"></div>
-
-                <main className="px-4 sm:px-6 lg:px-8 z-10 ">
-                  <div className="text-center relative">
-                    <h2 className="lg:text-8xl tracking-tight text-appWhite leading-10 font-bold sm:text-5xl text-white text-3xl sm:leading-none md:text-6xl">
-                      Humanitarian Efforts powered by the Youth.
-                    </h2>
-                    <p className="mt-3 text-white sm:mt-5 text-appWhite sm:text-md sm:max-w-xl sm:mx-auto md:mt-5 whitespace-nowrap overflow-hidden animate-typing">
-                      Join a group of dedicated youth in your city or town and
-                      let your voice be heard
-                    </p>
-                    <div className="mt-5 sm:mt-8 sm:flex justify-center">
-                      <div className="rounded-md shadow">
-                        <Link href="auth/login">
-                          <a
-                            href="#"
-                            className="w-full flex items-center justify-center px-8 py-3 border border-appWhite text-appWhite text-base leading-6 font-regular rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:px-10"
-                          >
-                            Get started
-                          </a>
-                        </Link>
-                      </div>
-                      <div className="mt-3 sm:mt-0 sm:ml-3">
-                        <Link href="donate">
-                          <a
-                            href="#"
-                            className="w-full flex items-center justify-center px-8 py-3 border border-appWhite text-appWhite text-base leading-6 font-regular rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:px-10"
-                          >
-                            Become a Donor
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </main>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div
-                className={`relative h-screen w-full flex items-center justify-center text-center bg-cover bg-center  bg-[url("../public/hero.png")]  `}
-              >
-                <div className="absolute top-0 right-0 bottom-0 left-0 bg-gray-900 backdrop-brightness-50"></div>
-
-                <main className="px-4 sm:px-6 lg:px-8 z-10">
-                  <div className="text-center">
-                    <h2 className="lg:text-8xl text-appWhite  font-bold sm:text-5xl text-white text-3xl sm:leading-none md:text-6xl">
-                      The Global Coalition of Youths
-                    </h2>
-                    <p className="mt-3 text-appWhite sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5">
-                      The coming together of the voices of youth to make a
-                      change in key areas of the world
-                    </p>
-                    <div className="mt-5 sm:mt-8 sm:flex justify-center">
-                      <div className="rounded-md shadow">
-                        <Link href="auth/login">
-                          <a
-                            href="#"
-                            className="w-full flex border border-appWhite items-center justify-center px-8 py-3  text-base leading-6 font-regular rounded-md text-appWhite bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:px-10"
-                          >
-                            Get started
-                          </a>
-                        </Link>
-                      </div>
-                      <div className="mt-3 sm:mt-0 sm:ml-3">
-                        <Link href="donate">
-                          <a
-                            href="#"
-                            className="w-full flex items-center justify-center px-8 py-3 border border-appWhite text-appWhite text-base leading-6 font-regular rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:px-10"
-                          >
-                            Join our Programs
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </main>
-              </div>
-            </SwiperSlide> */}
+       
           </Swiper>
 
           <section className="mt-10 mb-20">
@@ -528,7 +447,7 @@ function Home() {
               </div>
             </div>
           </section>
-        </div>
+     
       </main>
       <Footer />
     </>
