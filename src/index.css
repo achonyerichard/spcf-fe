@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 
-@media(max-height:800px){
-  body{
-    zoom:.85
-  }
-}
+
 
 body{
   font-family: 'Inter', sans-serif;
@@ -41,8 +37,7 @@ font-family: 'Roboto Condensed', sans-serif;
 .fixedTop {
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
   z-index: 1030;
 }
 
@@ -80,6 +75,8 @@ font-family: 'Roboto Condensed', sans-serif;
   left: 100%;
   visibility: visible;
 }
+
+
 @media (maxwidth: 400px) {
   
   .hidden {

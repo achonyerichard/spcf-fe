@@ -37,9 +37,9 @@ const Navigation = () => {
           : `nav fixedTop top-0 bg-[#FCD733] z-10 shadow-lg`
       }
     >
-      <div className="max-w-[1920px] w-full px-4 mx-auto lg:px-20">
-        <div className="flex justify-between">
-          <div className="flex lg:justify-between lg:items-center lg:w-full">
+      <div className="md:max-w-[1920px] w-full px-4 mx-auto lg:px-20">
+        <div className="flex lg:justify-between">
+          <div className="flex lg:justify-between lg:items-center w-full">
             <div className="">
               <Link to={"/"}>
                 {nav ? (
@@ -212,7 +212,7 @@ const Navigation = () => {
           </div>
 
           {/* mobile */}
-          <div className="flex items-center pr-3 lg:hidden ">
+          <div className="flex items-center  lg:hidden ">
             <Link href="/" className="outline-none mobile-menu-button">
               <span onClick={handleHamburger}>
                 {isActive ? (
@@ -267,7 +267,7 @@ const Navigation = () => {
               </p>
               <span
                 onClick={() => setAbout(!about)}
-                className="flex items-center space-x-2 py-2 px-4 transition duration-200  text-[#2C2917] group"
+                className="flex items-center space-x-2 py-2 px-6 transition duration-200  text-[#2C2917] group"
               >
                 <p className="text-2xl font-medium transition text-[#2C2917] duration-300">
                   About
@@ -318,7 +318,7 @@ const Navigation = () => {
                 className="flex items-center space-x-2 py-2 px-4 transition duration-200  text-[#2C2917]"
               >
                 <Link
-                  to="/forum"
+                  to="/news"
                   className="block text-2xl px-2 py-4  text-[#2C2917] transition duration-300"
                 >
                   <p className="text-2xl font-medium">News</p>
@@ -326,7 +326,7 @@ const Navigation = () => {
               </p>
               <span
                 onClick={() => setServices(!services)}
-                className="flex items-center space-x-2 py-2 px-4 transition duration-200  text-[#2C2917] group"
+                className="flex items-center space-x-2 py-2 px-6 transition duration-200  text-[#2C2917] group"
               >
                 <p className="text-2xl font-medium transition text-[#2C2917] duration-300">
                   Services
@@ -376,7 +376,7 @@ const Navigation = () => {
                 className="flex items-center space-x-2 py-2 px-4 transition duration-200  text-[#2C2917] group"
               >
                 <Link
-                  to="/coming-soon"
+                  to="/supermarket"
                   className="block text-sm px-2 py-4  transition text-[#2C2917] duration-300"
                 >
                   <p className="text-2xl font-medium">SuperMarket</p>

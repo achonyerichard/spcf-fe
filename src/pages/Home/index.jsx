@@ -24,19 +24,19 @@ function Home() {
     <>
       <Nav />
       <main>
-        <div className="">
+        <div className="w-full">
           <Swiper
             spaceBetween={30}
             centeredSlides
             pagination={{
               clickable: true,
             }}
-            navigation={true}
+     
             autoplay={{
               delay: 7000,
               disableOnInteraction: false,
             }}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Navigation,Pagination]}
             className="mySwiper"
           >
             <SwiperSlide>
