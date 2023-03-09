@@ -72,7 +72,7 @@ function News() {
           </section>
           <section className="mt-20 mb-20 items-center">
             <div className="container md:mx-auto px-5">
-              <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 md:gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 md:gap-10 gap-y-4">
                 {data.map((news) => (
                   <div
                     className="rounded  shadow-lg"
@@ -81,9 +81,9 @@ function News() {
                     
                       <div className="">
                         <img
-                          className="md:w-[382px] w-96 md:h-[164px] rounded-t-lg md:object-cover"
+                          className="md:w-[382px] w-full md:h-[164px] rounded-t-lg md:object-cover"
                           src={news?.img}
-                          alt="Sunset in the mountains"
+                          alt="Blog"
                         />
                      
                       </div>

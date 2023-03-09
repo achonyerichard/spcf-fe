@@ -43,9 +43,9 @@ function Home() {
               <div
                 className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
               >
-                <main className=" sm:px-6  z-10 max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+                <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                   <div className="  lg:w-1/2 ">
-                    <h2 className="lg:text-7xl tracking-tight leading-10 font-bold  text-left text-HomeWhite sm:leading-none text-3xl md:text-[53px] ">
+                    <h2 className="lg:text-7xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-3xl md:text-[53px] ">
                       Join Hands To Make The Lives of An{" "}
                       <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
                       Counts
@@ -83,9 +83,9 @@ function Home() {
               <div
                 className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  `}
               >
-                <main className=" sm:px-6  z-10 max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+                <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                   <div className="  lg:w-1/2 ">
-                    <h2 className="lg:text-8xl tracking-tight leading-10 font-bold  text-left text-HomeWhite sm:leading-none text-3xl md:text-[53px] ">
+                    <h2 className="lg:text-8xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-3xl md:text-[53px] ">
                       Join Hands To Make The Lives of An{" "}
                       <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
                       Counts
@@ -416,9 +416,9 @@ function Home() {
           </section>
           <section className="bg-white  w-full lg:mt-28 mb-20  ">
             <div
-              className={`lg:px-40 relative h-full w-full flex items-center justify-center text-center bg-cover bg-blend-overlay bg-center bg-no-repeat  bg-[url('../public/img/section-2.jpg')]`}
+              className={`lg:px-40  h-full w-full flex items-center justify-center text-center bg-cover bg-blend-overlay bg-center bg-no-repeat  bg-[url('../public/img/section-2.jpg')]`}
             >
-              <div className="absolute top-0 right-0 bottom-0 left-0  backdrop-brightness-50"></div>
+         
 
               <main
                 className="px-4 sm:px-6 lg:px-8 z-10"
