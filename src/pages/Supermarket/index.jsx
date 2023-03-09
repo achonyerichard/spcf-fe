@@ -213,7 +213,7 @@ const SuperMarket = () => {
                           
                         />
                         <label
-                          for="radio1"
+                          htmlFor="radio1"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
@@ -229,7 +229,7 @@ const SuperMarket = () => {
                           className="hidden"
                         />
                         <label
-                          for="radio2"
+                          htmlFor="radio2"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4  bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
@@ -245,7 +245,7 @@ const SuperMarket = () => {
                           className="hidden"
                         />
                         <label
-                          for="radio3"
+                          htmlFor="radio3"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
@@ -261,7 +261,7 @@ const SuperMarket = () => {
                           className="hidden"
                         />
                         <label
-                          for="radio4"
+                          htmlFor="radio4"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
@@ -277,7 +277,7 @@ const SuperMarket = () => {
                           className="hidden"
                         />
                         <label
-                          for="radio5"
+                          htmlFor="radio5"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
@@ -292,7 +292,7 @@ const SuperMarket = () => {
                           className="hidden"
                         />
                         <label
-                          for="radio5"
+                          htmlFor="radio5"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
@@ -307,7 +307,7 @@ const SuperMarket = () => {
                           className="hidden"
                         />
                         <label
-                          for="radio5"
+                          htmlFor="radio5"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
@@ -322,7 +322,7 @@ const SuperMarket = () => {
                           className="hidden"
                         />
                         <label
-                          for="radio5"
+                          htmlFor="radio5"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>
@@ -337,7 +337,7 @@ const SuperMarket = () => {
                           className="hidden"
                         />
                         <label
-                          for="radio5"
+                          htmlFor="radio5"
                           className="flex items-center cursor-pointer"
                         >
                           <span className="w-4 h-4 bg-[#D9D9D9] inline-block mr-1 border border-grey text-[#908D7E]"></span>

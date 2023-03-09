@@ -119,19 +119,10 @@ const Navigation = () => {
                 </li>
                 <li className={"lg:text-xl "}>
                   <Link to={"/news"}>
-                    <a>News </a>
+                    News 
                   </Link>
                 </li>
-                {/* <li className={router.pathname === "/" ? "lg:text-xl   border-b-4 border-[#2C2917]":"lg:text-xl "}>
-                  <Link href={"/advocacy"}>
-                    <a>Advocacy</a>
-                  </Link>
-                </li> */}
-                {/* <li className={router.pathname === "/" ? "lg:text-xl   border-b-4 border-[#2C2917]":"lg:text-xl "}>
-                  <Link href={"/programs"}>
-                    <a>Programs</a>
-                  </Link>
-                </li> */}
+              
                 <li className={"lg:text-xl cursor-pointer"}>
                   <p
                     className="flex dropdown-toggle items-center whitespace-nowrap peer"
@@ -186,22 +177,22 @@ const Navigation = () => {
 
                 <li className={"lg:text-lg "}>
                   <Link to={"/supermarket"}>
-                    <a>Supermarket</a>
+                   Supermarket
                   </Link>
                 </li>
                 <li className={"lg:text-lg "}>
                   <Link to={"/contact"}>
-                    <a>Contact Us</a>
+                   Contact Us
                   </Link>
                 </li>
                 <li className={"lg:text-lg "}>
                   <Link to={"/donation"}>
-                    <a>Donate</a>
+                   Donate
                   </Link>
                 </li>
                 <li className={"lg:text-lg "}>
                   <Link to={"/donation"}>
-                    <a>Soup Kitchen</a>
+                   Soup Kitchen
                   </Link>
                 </li>
                 <li className={"lg:text-lg "}>
@@ -222,7 +213,7 @@ const Navigation = () => {
           {/* mobile */}
           <div className="flex items-center pr-3 lg:hidden ">
             <Link href="/" className="outline-none mobile-menu-button">
-              <a onClick={handleHamburger}>
+              <span onClick={handleHamburger}>
                 {isActive ? (
                   <AiOutlineClose className="text-[#3F3A21] text-lg" />
                 ) : (
@@ -239,7 +230,7 @@ const Navigation = () => {
                     <path d="M4 6h16M4 12h16M4 18h16"></path>
                   </svg>
                 )}
-              </a>
+              </span>
             </Link>
           </div>
         </div>
@@ -258,17 +249,7 @@ const Navigation = () => {
             data-dev-hint="optional div for having an extra footer navigation"
           >
             <div className="">
-              <Link href={"/"}>
-                <a>
-                  {/* <Image
-                    // src={logo}
-                    src={"/wetheyouths.png"}
-                    width={205}
-                    height={79}
-                    alt="We The Youths Logo"
-                  /> */}
-                </a>
-              </Link>
+              
             </div>
 
             <nav className="space-y-6">
