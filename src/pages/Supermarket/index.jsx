@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../../components/navigation/Navigation";
 import Footer from "../../components/footer";
@@ -6,16 +6,24 @@ import { BsCart3, BsSearch } from "react-icons/bs";
 import { FaShoppingBag, FaShoppingCart } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import getProducts from "../../data/productsData";
+import { CartContext } from "../../contexts/cart-context";
+import { ProductsContext } from "../../contexts/products-context";
+
 
 const SuperMarket = () => {
-  const [data, setData] = useState([]);
+ 
+  const { cartItem, cartCount,addItemToCart,cartTotal } = useContext(CartContext);
+  const [cartClicked, setCartClicked] = useState("")
+  const cartAdd=(product)=>{
+    addItemToCart(product)
+   setCartClicked(product.id)
+   
+  }
+  const {productData} = useContext(ProductsContext)
 
-  useEffect(() => {
-    const copyData = getProducts();
-    console.log(copyData);
-    setData(copyData);
-  }, []);
-  console.log("ffgfgf", data);
+
+
+  
   return (
     <>
       <Nav />
@@ -65,7 +73,8 @@ const SuperMarket = () => {
                   <div>
                     <AiOutlineHeart className="text-3xl" />
                   </div>
-                  <div className="relative">
+                  <Link to="/checkout">
+                  <div className="relative cursor-pointer">
                     <svg
                       width="30"
                       height="30"
@@ -92,10 +101,12 @@ const SuperMarket = () => {
                     </svg>
                     <div className="absolute -top-3 right-0">
                       <span className="text-red-900 font-bold text-xs rounded-full ">
-                        1
+                        {cartCount}
                       </span>
                     </div>
                   </div>
+                  </Link>
+                
                   {/* <input
                   className="appearance-none block w-[291px] border border-gray-400  bg-[#F5F5F5] text-gray-700  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
@@ -337,8 +348,8 @@ const SuperMarket = () => {
                   </div>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 pt-10  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5">
-                  {data.map((product) => (
-                    <div className="flex-shrink-0  relative overflow-hidden bg-white rounded-lg shadow-sm border border-gray-200">
+                  {productData.map((product) => (
+                    <div className="flex-shrink-0  relative overflow-hidden bg-white rounded-lg shadow-sm border border-gray-200" key={product.id}>
                       <div className="relative pt-5 px-10 flex items-center justify-center">
                         <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"></div>
                         <img
@@ -366,8 +377,8 @@ const SuperMarket = () => {
                             {" "}
                             <AiOutlineHeart className="text-3xl text-black" />
                           </span>
-                          <span className=" bg-white rounded-full  text-xs font-bold px-3 py-2 leading-none flex items-center">
-                            <BsCart3 className="text-3xl text-black" />
+                          <span className={`${cartClicked === product.id && "bg-orange-200/50 "} bg-white  rounded-full  text-xs font-bold px-3 py-3 leading-none flex items-center`}>
+                            <BsCart3 className="text-3xl text-[#FF8B1F] cursor-pointer" onClick={()=>cartAdd(product)}/>
                           </span>
                         </div>
                       </div>

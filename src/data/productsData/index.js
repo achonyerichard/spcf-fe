@@ -49,7 +49,7 @@ const productData = [
     category: "Fresh Produce",
   },
   {
-    id: 5,
+    id: 6,
     name: "Citrus",
     description:
       "A small and sweet fruit that's rich in antioxidants and polyphenols.",

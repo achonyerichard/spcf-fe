@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import About from "./pages/About";
 import Career from "./pages/Career";
 import Center from "./pages/Center";
+import Checkout from "./pages/Chekout";
 import Contact from "./pages/Contact";
 import Donation from "./pages/Donation";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -40,6 +41,7 @@ function App() {
       <Route path="/onboarding" element={<Onboarding />} />
       <Route path="/news" element={<News />} />
       <Route path="/supermarket" element={<SuperMarket />} />
+      <Route path="/checkout" element={<Checkout />} />
       <Route path="/news/:id" element={<NewsDetails />} />
     </Routes>
   );
