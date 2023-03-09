@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { BsFillQuestionCircleFill, BsPlusLg } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navigation = () => {
   const [isActive, setIsActive] = useState(false);
@@ -240,7 +241,7 @@ const Navigation = () => {
       {isActive && (
         <aside
           id="sidebar"
-          className={`bg-white text-gray-100 md:w-64 w-3/4 space-y-6 h-screen pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition   md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation z-40  ease-in-out duration-300 lg:hidden ${
+          className={`bg-white text-gray-100 md:w-64 w-3/4 space-y-6 h-screen pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition shadow-md  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation z-40  ease-in-out duration-300 lg:hidden ${
             isActive ? "translate-x-0 " : "translate-x-full"
           }`}
         >
