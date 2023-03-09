@@ -28,13 +28,13 @@ function Checkout() {
       <main className="mb-20">
         <section className="bg-white p-8 lg:px-40 w-full lg:mt-28">
           <div className="container mx-auto mt-10">
-            <div className="flex  my-10">
-              <div className="w-3/4 bg-white px-10 py-10">
-                <div className="flex justify-between border-b pb-8">
+            <div className="md:flex  my-10">
+              <div className="md:w-3/4 bg-white md:px-10 md:py-10 py-14">
+                <div className="md:flex justify-between border-b pb-8">
                   <h1 className="font-medium  text-2xl text-[#3F3A21]">Your Cart</h1>
                   <h2 className="font-semibold text-sm text-[#908D7E] ">You have <span className="text-[#FF8B1F]">{cartItem.length}</span> items in your cart</h2>
                 </div>
-                <div className="flex items-center bg-[#F7F7F7] mt-10 mb-5 p-3">
+                <div className="flex items-center bg-[#F7F7F7] md:mt-10 mb-5 p-3">
                   <h3 className="font-semibold text-gray-600 text-sm capitalize w-2/5">
                     Product 
                   </h3>
@@ -55,28 +55,23 @@ function Checkout() {
                   >
                     <div className="flex w-2/5">
                       <div className="w-20">
-                        <img className="h-24" src={item.image} alt="" />
+                        <img className="md:h-24 object-cover" src={item.image} alt="" />
                       </div>
-                      <div className="flex flex-col justify-between ml-4 flex-grow">
-                        <span className="font-bold text-sm">{item.name}</span>
-                        <span className="text-red-500 text-xs">
+                      <div className="flex flex-col justify-between ml-4 md:flex-grow ">
+                        <span className="font-bold text-sm w-1/2">{item.name}</span>
+                        <span className="text-red-500 text-xs ">
                           {item.category}
                         </span>
-                        <a
-                          href="#"
-                          className="font-semibold hover:text-red-500 text-gray-500 text-xs"
-                        >
-                          Remove
-                        </a>
+                       
                       </div>
                     </div>
                     <div className="flex justify-center w-1/5">
                       <span
-                        className="bg-[#FF9F45] flex items-center p-2 rounded-sm cursor-pointer "
+                        className="bg-[#FF9F45] flex items-center p-1 md:p-2 rounded-sm cursor-pointer "
                         onClick={() => addItem(item)}
                       >
                         <svg
-                          className="fill-current text-white w-3"
+                          className="fill-current text-white md:w-3 w-2"
                           viewBox="0 0 448 512"
                         >
                           <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -84,7 +79,7 @@ function Checkout() {
                       </span>
 
                       <input
-                        className="mx-2 border text-center w-8"
+                        className="mx-2 border text-center md:w-8 w-4"
                         type="text"
                         value={item.quantity}
                         disabled
@@ -94,7 +89,7 @@ function Checkout() {
                         onClick={() => removeItem(item)}
                       >
                         <svg
-                          className="fill-current text-black w-3"
+                          className="fill-current text-black  md:w-3 w-2"
                           viewBox="0 0 448 512"
                         >
                           <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -103,7 +98,7 @@ function Checkout() {
                     </div>
                     <span className="text-center w-1/5 font-semibold text-sm flex justify-center">
                       <MdOutlineDeleteOutline
-                        className="text-2xl fill-[#FF9F45] cursor-pointer"
+                        className="text-lg md:text-2xl fill-[#FF9F45] cursor-pointer"
                         onClick={() => clearItem(item)}
                       />
                     </span>
@@ -127,7 +122,7 @@ function Checkout() {
                 </Link>
               </div>
 
-              <div id="summary" className="w-1/4 ">
+              <div id="summary" className="md:w-1/4 ">
                 <div className="px-8 py-10 bg-[#F2F2F2]">
                 <div className="flex justify-between  mb-5">
                   <span className="font-medium text-2xl capitalize">
@@ -174,7 +169,7 @@ function Checkout() {
                       className="p-3 text-sm w-[242px] bg-[#EEEEEE]"
                     />
                   </div>
-                  <button className="bg-[#FF8B1F] hover:bg-[#FCD733] px-5 py-3 text-sm text-white capitalize">
+                  <button className="bg-[#FF8B1F] hover:bg-[#FCD733] md:px-5 px-2 py-3 text-sm text-white capitalize">
                     Apply Coupon
                   </button>
                 </div>
