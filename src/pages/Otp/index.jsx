@@ -24,25 +24,28 @@ const Otp = () => {
                   <input
                     className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
                     type="text"
-                    maxlength="1"
+                    maxLength="1"
                   />
                   <input
                     className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
                     type="text"
-                    maxlength="1"
+                    maxLength="1"
                   />
                   <input
                     className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
                     type="text"
-                    maxlength="1"
+                    maxLength="1"
                   />
                   <input
                     className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
                     type="text"
-                    maxlength="1"
+                    maxLength="1"
                   />
                 </div>
-                <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300" onClick={()=>setSuccess(true)}>
+                <button
+                  className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300"
+                  onClick={() => setSuccess(true)}
+                >
                   Submit
                 </button>
               </form>
@@ -68,14 +71,11 @@ const Otp = () => {
                 will be notified on your next process.
               </p>
               <Link to="/onboarding">
-              
-             
-              <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300 w-full mt-10">
-              Proceed to Dashboard
-            </button>
-            </Link>
+                <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300 w-full mt-10">
+                  Proceed to Dashboard
+                </button>
+              </Link>
             </div>
-           
           </div>
         )}
       </section>

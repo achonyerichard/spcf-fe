@@ -3,13 +3,18 @@ import { Link } from "react-router-dom";
 
 import { BsFillQuestionCircleFill, BsPlusLg } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
+import { useAuthContext } from "../../hooks/useAuthContext";
+
 
 const Navigation = () => {
+  const { user } = useAuthContext();
+
   const [isActive, setIsActive] = useState(false);
   const [nav, setNav] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [about, setAbout] = useState(false);
   const [services, setServices] = useState(false);
+  const [profile,setProfile] =useState(false)
 
   // hamburger toggle
   const handleHamburger = (e) => {
@@ -43,7 +48,11 @@ const Navigation = () => {
             <div className="">
               <Link to={"/"}>
                 {nav ? (
-                  <div className={`flex flex-col items-center justify-center ${nav && "transition-all ease-in-out duration-300"} `}>
+                  <div
+                    className={`flex flex-col items-center justify-center ${
+                      nav && "transition-all ease-in-out duration-300"
+                    } `}
+                  >
                     <img
                       // src={logo}`
                       className="w-10 h-12"
@@ -69,7 +78,7 @@ const Navigation = () => {
               <ul className="text-[#3F3A21] font-medium lg:flex items-center justify-center  space-x-6">
                 <li className={"lg:text-lg cursor-pointer"}>
                   <p
-                    className="flex dropdown-toggle items-center whitespace-nowrap peer"
+                    className="flex dropdown-toggle items-center whitespace-nowrap peer text-lg"
                     type="button"
                     id="dropdownMenuButton2"
                     data-bs-toggle="dropdown"
@@ -118,15 +127,13 @@ const Navigation = () => {
                     </li>
                   </ul>
                 </li>
-                <li className={"lg:text-xl "}>
-                  <Link to={"/news"}>
-                    News 
-                  </Link>
+                <li className={"text-lg "}>
+                  <Link to={"/news"}>News</Link>
                 </li>
-              
+
                 <li className={"lg:text-xl cursor-pointer"}>
                   <p
-                    className="flex dropdown-toggle items-center whitespace-nowrap peer"
+                    className="flex dropdown-toggle items-center whitespace-nowrap peer text-lg"
                     type="button"
                     id="dropdownMenuButton2"
                     data-bs-toggle="dropdown"
@@ -166,7 +173,7 @@ const Navigation = () => {
                     <li>
                       <Link
                         to="/centers"
-                        className=" dropdown-item text-lgO py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100
+                        className=" dropdown-item text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100
             "
                         href="#"
                       >
@@ -177,35 +184,58 @@ const Navigation = () => {
                 </li>
 
                 <li className={"lg:text-lg "}>
-                  <Link to={"/supermarket"}>
-                   Supermarket
-                  </Link>
+                  <Link to={"/supermarket"}>Supermarket</Link>
                 </li>
                 <li className={"lg:text-lg "}>
-                  <Link to={"/contact"}>
-                   Contact Us
-                  </Link>
+                  <Link to={"/contact"}>Contact Us</Link>
                 </li>
                 <li className={"lg:text-lg "}>
-                  <Link to={"/donation"}>
-                   Donate
-                  </Link>
+                  <Link to={"/donation"}>Donate</Link>
                 </li>
+
                 <li className={"lg:text-lg "}>
-                  <Link to={"/donation"}>
-                   Soup Kitchen
-                  </Link>
-                </li>
-                <li className={"lg:text-lg "}>
-                  <button className="text-white lg:p-2 bg-[#FF8B1F] lg:rounded-[5px] lg:w-[180px] lg:h-[60px] lg:text-lg">
-                    <span className="hover:underline">
-                      <Link to={"/login"}>Login</Link>
-                    </span>
-                    /
-                    <span className="hover:underline">
-                      <Link to={"/register"}>Register</Link>
-                    </span>
+                  {user ? (
+                    <>
+                    <img
+                     onClick={() => {
+                      setAbout(false);
+                      setServices(false);
+                      setProfile(!profile)
+                    }}
+                    className="object-cover rounded-full h-12 w-12 mx-auto cursor-pointer "
+                    src={
+                      user?.profile
+                        ? user?.profile
+                        : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                    }
+                    alt="Human Picture by Ike louie Natividad"
+                  />
+                  <ul
+                  className={
+                    profile
+                      ? `peer-focus-visible:block dropdown-menu min-w-max absolute bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none`
+                      : `hidden`
+                  }
+                  aria-labelledby="dropdownMenuButton2"
+                >
+                  <li>
+                    <p
+                    
+                      className=" dropdown-item text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100
+          "
+                      href="#"
+                    >
+                      Logout
+                    </p>
+                  </li>
+                 
+                </ul>
+                </>
+                  ) : (
+                    <button className="text-white lg:p-2 bg-[#FF8B1F] lg:rounded-[5px]   lg:text-lg">
+                    <Link to={"/login"}>Soup Kitchen</Link>
                   </button>
+                  )}
                 </li>
               </ul>
             </div>
@@ -249,9 +279,7 @@ const Navigation = () => {
             className="flex flex-col space-y-6"
             data-dev-hint="optional div for having an extra footer navigation"
           >
-            <div className="">
-              
-            </div>
+            <div className=""></div>
 
             <nav className="space-y-6">
               <p

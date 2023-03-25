@@ -57,7 +57,7 @@ const Register = () => {
                   className="appearance-none flex placeholder:py-4 w-full bg-white
                    text-appBlack  rounded py-3 px-4  leading-tight focus:outline-none  "
                   style={{ backgroundColor: "white" }}
-                  containerclassName=""
+                 
                 />
               </div>
               <div className=" ">

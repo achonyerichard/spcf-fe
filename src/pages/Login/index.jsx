@@ -1,19 +1,49 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import useLogin from "../../hooks/useLogin";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+
 
   const { login, error, loading } = useLogin();
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await login(email, password)
+    console.log("kkkkk",error);
+    await login(email, password);
+  
+   
   }
+
+
   return (
     <div>
+      {isVisible && error && (
+        
+        <div className="relative ease-out duration-5000">
+          <div className="absolute top-0 right-1">
+            <div className="bg-red-100 p-5 w-full ">
+              <div className="flex space-x-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="flex-none fill-current text-red-500 h-4 w-4 cursor-pointer"
+                  onClick={()=>setIsVisible(false)}
+                >
+                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.597 17.954l-4.591-4.55-4.555 4.596-1.405-1.405 4.547-4.592-4.593-4.552 1.405-1.405 4.588 4.543 4.545-4.589 1.416 1.403-4.546 4.587 4.592 4.548-1.403 1.416z" />
+                </svg>
+                <div className="leading-tight flex flex-col space-y-2">
+                  <h1 className="text-sm font-medium text-red-700">{error}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <section className=" min-h-screen flex flex-col items-center justify-center">
         <div className="bg-[#F7F7F7]   shadow-xl w-[424px] p-5 items-center">
           <div className="md:w-full px-5">
@@ -25,7 +55,11 @@ const Login = () => {
               />
             </div>
 
-            <form action="" className="flex flex-col gap-4" onSubmit={handleSubmit}>
+            <form
+              action=""
+              className="flex flex-col gap-4"
+              onSubmit={handleSubmit}
+            >
               <div className="mt-8">
                 <label
                   className="block  tracking-wide text-gray-700 text-lg font-medium mb-2"
@@ -43,6 +77,7 @@ const Login = () => {
                     setEmail(e.target.value);
                     console.log(e.target.value);
                   }}
+                  required
                 />
               </div>
 
@@ -54,12 +89,13 @@ const Login = () => {
                   Password
                 </label>
                 <input
-                value={password}
+                  value={password}
                   className="p-4  border w-full"
                   type="password"
                   name="password"
                   placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}
+                  required
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -77,8 +113,12 @@ const Login = () => {
                   <Link to="/forgot-password">Forgot your password?</Link>
                 </div>
               </div>
-              <button disabled={loading} type="submit" className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300">
-                Login
+              <button
+                disabled={loading}
+                type="submit"
+                className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300"
+              >
+                {loading ? "Loading..." : "Login"}
               </button>
             </form>
           </div>

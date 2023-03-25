@@ -37,8 +37,8 @@ function Center() {
                   <span className="text-[#FBCF09]"> centers</span> for <br />
                   our feeding programme.
                 </h2>
-                <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-center md:mt-5 ">
-                  Lets make the world a better place by contributing to the
+                <p className="mt-3 text-white sm:mt-5 text-lg  text-center md:mt-5 ">
+                  Lets make the world a better place by contributing to the <br/>
                   lives of the needy in little ways.
                 </p>
                 {/* <div className="mt-5 sm:mt-8 sm:flex justify-center">
@@ -56,7 +56,7 @@ function Center() {
               </div>
             </div>
           </div>
-          <div className="md:mx-40 mx-5 shadow-xl   bg-white  -mt-12 z-20 relative px-5 md:py-10 py-5  rounded-lg">
+          <div className="md:mx-40 mx-5 shadow-xl   bg-white  -mt-12 z-20 relative px-5 md:py-5 py-5  rounded-lg">
             <div className="flex items-center gap-12">
               <div className="md:w-1/3">
                 <div className="relative flex items-center">

@@ -1,11 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from "react";
+import useApi from "../../hooks/useApi";
 
-
-import Nav from '../../components/navigation/Navigation';
+import Nav from "../../components/navigation/Navigation";
 import Footer from "../../components/footer";
 
 function Gallery() {
-  const [count, setCount] = useState(0)
+  const [data, isLoading, error] = useApi(
+    "http://spcf-api.onrender.com/images/public"
+  );
+
+
+
+
 
   return (
     <>
@@ -46,10 +52,9 @@ function Gallery() {
                   placeholder="Search..."
                 />
               </div>
-              <div className='md:w-2/3 justify-end flex'>
+              <div className="md:w-2/3 justify-end flex">
                 <div className=" flex flex-col justify-center items-center">
                   <div className="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
-                    
                     <div className="bg-gray-200 text-gray-900 py-3 px-6 rounded-full text-lg font-medium hover:bg-[#FCD733] hover:text-white">
                       All
                     </div>
@@ -69,23 +74,86 @@ function Gallery() {
                 </div>
               </div>
             </div>
+            {isLoading &&  <section className="text-gray-700 body-font">
+  <div className="container px-5 py-24 mx-auto">
+    <div>Loading</div>
+    <div className="flex flex-wrap -m-4">
+      <div className="p-4 md:w-1/3">
+        <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+          <div className="lg:h-48 bg-gray-400 md:h-36 w-full object-cover object-center"></div>
+          <div className="p-6">
+            <h2 className="bg-gray-400 animate-pulse h-4 w-1/4 mb-2"></h2>
+            <h1 className="w-1/2 mb-4 h-6 animate-pulse bg-gray-500"></h1>
+            <p className="leading-relaxed mb-3 w-full h-3 animate-pulse bg-gray-400"></p>
+            <p className="leading-relaxed mb-3 w-2/3 h-3 animate-pulse bg-gray-400"></p>
+            <p className="leading-relaxed mb-3 w-1/2 h-3 animate-pulse bg-gray-400"></p>
+            <div className="flex items-center flex-wrap ">
+              <a className="bg-indigo-300 h-4 animate-pulse mt-2 w-32 inline-flex items-center md:mb-2 lg:mb-0">
+                
+              </a>
+              <span className="bg-indigo-300 w-16 mt-2 h-4 animate-pulse mr-3 px-2 inline-flex items-center ml-auto leading-none text-sm pr-5 py-1">
+                
+              </span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-4 md:w-1/3">
+        <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+          <div className="lg:h-48 bg-gray-400 md:h-36 w-full object-cover object-center"></div>
+          <div className="p-6">
+            <h2 className="bg-gray-400 animate-pulse h-4 w-1/4 mb-2"></h2>
+            <h1 className="w-1/2 mb-4 h-6 animate-pulse bg-gray-500"></h1>
+            <p className="leading-relaxed mb-3 w-full h-3 animate-pulse bg-gray-400"></p>
+            <p className="leading-relaxed mb-3 w-2/3 h-3 animate-pulse bg-gray-400"></p>
+            <p className="leading-relaxed mb-3 w-1/2 h-3 animate-pulse bg-gray-400"></p>
+            <div className="flex items-center flex-wrap ">
+              <a className="bg-indigo-300 h-4 animate-pulse mt-2 w-32 inline-flex items-center md:mb-2 lg:mb-0">
+                
+              </a>
+              <span className="bg-indigo-300 w-16 mt-2 h-4 animate-pulse mr-3 px-2 inline-flex items-center ml-auto leading-none text-sm pr-5 py-1">
+                
+              </span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-4 md:w-1/3">
+        <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+          <div className="lg:h-48 bg-gray-400 md:h-36 w-full object-cover object-center"></div>
+          <div className="p-6">
+            <h2 className="bg-gray-400 animate-pulse h-4 w-1/4 mb-2"></h2>
+            <h1 className="w-1/2 mb-4 h-6 animate-pulse bg-gray-500"></h1>
+            <p className="leading-relaxed mb-3 w-full h-3 animate-pulse bg-gray-400"></p>
+            <p className="leading-relaxed mb-3 w-2/3 h-3 animate-pulse bg-gray-400"></p>
+            <p className="leading-relaxed mb-3 w-1/2 h-3 animate-pulse bg-gray-400"></p>
+            <div className="flex items-center flex-wrap ">
+              <a className="bg-indigo-300 h-4 animate-pulse mt-2 w-32 inline-flex items-center md:mb-2 lg:mb-0">
+                
+              </a>
+              <span className="bg-indigo-300 w-16 mt-2 h-4 animate-pulse mr-3 px-2 inline-flex items-center ml-auto leading-none text-sm pr-5 py-1">
+                
+              </span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>}
             <div className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
-              <img src="https://source.unsplash.com/bYuI23mnmDQ" alt="" />
-              <img src="https://source.unsplash.com/Nllx4R-2c3o" alt="" />
-              <img src="https://source.unsplash.com/lp40q07DIe0" alt="" />
-              <img src="https://source.unsplash.com/wfalq01jJuU" alt="" />
-              <img src="https://source.unsplash.com/rMHNK_skwwU" alt="" />
-              <img src="https://source.unsplash.com/WBMjuGpbrCQ" alt="" />
-              <img src="https://source.unsplash.com/nCUZ5BYBL_o" alt="" />
-              <img src="https://source.unsplash.com/3u4fzMQZhjc" alt="" />
-              <img src="https://source.unsplash.com/haOIqIPSwps" alt="" />
-              <img src="https://source.unsplash.com/3UrYD7NNVxk" alt="" />
-              <img src="https://source.unsplash.com/fm1JKDItlVM" alt="" />
-              <img src="https://source.unsplash.com/qPpq1EVs8vw" alt="" />
-              <img src="https://source.unsplash.com/xRyL63AwZFE" alt="" />
-              <img src="https://source.unsplash.com/XeNKWTiCPNw" alt="" />
-              <img src="https://source.unsplash.com/DFt3T5r_4FE" alt="" />
-              <img src="https://source.unsplash.com/Ebwp2-6BG8E" alt="" />
+           {error && <div className="flex justify-center items-center mx-auto text-red-600"><h1 className="text-2xl">Error: {error}</h1></div>}
+           
+              {data?.images?.map((datas) => (
+                <img
+                  key={datas?._id}
+                  src={`http://spcf-api.onrender.com/static/gallery/${datas?._id}.webp`}
+                  alt=""
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -95,4 +163,4 @@ function Gallery() {
   );
 }
 
-export default Gallery
+export default Gallery;

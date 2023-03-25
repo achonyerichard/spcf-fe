@@ -29,7 +29,7 @@ function Checkout() {
         <section className="bg-white p-8 lg:px-40 w-full lg:mt-28">
           <div className="container mx-auto mt-10">
             <div className="md:flex  my-10">
-              <div className="md:w-3/4 bg-white md:px-10 md:py-10 py-14">
+              <div className="md:w-2/3 bg-white md:px-10 md:py-10 py-14">
                 <div className="md:flex justify-between border-b pb-8">
                   <h1 className="font-medium  text-2xl text-[#3F3A21]">Your Cart</h1>
                   <h2 className="font-semibold text-sm text-[#908D7E] ">You have <span className="text-[#FF8B1F]">{cartItem.length}</span> items in your cart</h2>
@@ -57,7 +57,7 @@ function Checkout() {
                       <div className="w-20">
                         <img className="md:h-24 object-cover" src={item.image} alt="" />
                       </div>
-                      <div className="flex flex-col justify-between ml-4 md:flex-grow ">
+                      <div className="flex flex-col  ml-4 md:flex-grow ">
                         <span className="font-bold text-sm w-1/2">{item.name}</span>
                         <span className="text-red-500 text-xs ">
                           {item.category}
@@ -122,7 +122,7 @@ function Checkout() {
                 </Link>
               </div>
 
-              <div id="summary" className="md:w-1/4 ">
+              <div id="summary" className="md:w-1/3 ">
                 <div className="px-8 py-10 bg-[#F2F2F2]">
                 <div className="flex justify-between  mb-5">
                   <span className="font-medium text-2xl capitalize">
@@ -160,18 +160,22 @@ function Checkout() {
 
                 </div>
                 <div className=" flex items-center mt-8 w-full">
-                  <div className="flex flex-col items-center justify-center">
-                    
+                 
+                    <div className="w-2/3">
                     <input
                       type="text"
                       id="promo"
                       placeholder="Please Enter Your Promo Code"
                       className="p-3 text-sm w-[242px] bg-[#EEEEEE]"
                     />
-                  </div>
-                  <button className="bg-[#FF8B1F] hover:bg-[#FCD733] md:px-5 px-2 py-3 text-sm text-white capitalize">
+                    </div>
+                   
+               <div className="w-1/3">
+               <button className="bg-[#FF8B1F] hover:bg-[#FCD733] md:px-2 px-2 py-3 text-sm text-white capitalize">
                     Apply Coupon
                   </button>
+               </div>
+                 
                 </div>
                
               </div>

@@ -56,9 +56,9 @@ function Career() {
         </section>
         <section className="bg-white p-8 lg:px-40 w-full lg:mt-28 lg:max-w-[1920px] ">
           <div className="lg:flex flex-wrap text-center justify-center lg:px-40">
-            <div className="w-full lg:w-2/3 px-4">
-              <h2 className="lg:text-6xl text-4xl font-semibold text-black">
-                <span className="text-[#FBCF09]">Benefits</span> of working with
+            <div className="w-full  px-4">
+              <h2 className="lg:text-5xl text-3xl font-semibold text-black">
+                <span className="text-[#FBCF09]">Benefits</span><br/> of working with
                 Us
               </h2>
               <p className="md:text-lg text-sm font-medium leading-relaxed m-4 text-[#605B47]">
@@ -69,7 +69,7 @@ function Career() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8 lg:px-40">
+          <div className="flex flex-col items-center lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8 lg:px-20">
             <div className="flex ">
               <ul className="list-none mt-6 space-y-10">
                 <li className="py-2">
@@ -194,9 +194,9 @@ function Career() {
         </section>
         <section className="bg-white p-8 lg:px-40 w-full lg:mt-28 lg:max-w-[1920px] ">
           <div className="lg:flex flex-wrap text-center justify-center lg:px-40">
-            <div className="w-full lg:w-2/3 px-4">
-              <h2 className="lg:text-6xl text-4xl font-semibold text-black">
-                <span className="text-[#FBCF09]">Career</span> Opportunities
+            <div className="w-full  px-4">
+              <h2 className="lg:text-5xl text-4xl font-semibold text-black">
+                <span className="text-[#FBCF09]">Career</span><br/> Opportunities
               </h2>
               
             </div>
@@ -213,7 +213,7 @@ function Career() {
               />
               <label
                 htmlFor="panel-1"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Volunteers</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>
@@ -239,7 +239,7 @@ function Career() {
               />
                <label
                 htmlFor="panel-2"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Cheffuer</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>
@@ -265,7 +265,7 @@ function Career() {
               />
                <label
                 htmlFor="panel-3"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Driver</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>
@@ -295,7 +295,7 @@ function Career() {
               />
                <label
                 htmlFor="panel-4"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Volunteers</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>
@@ -321,7 +321,7 @@ function Career() {
               />
                <label
                 htmlFor="panel-5"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Secretary</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>
@@ -347,7 +347,7 @@ function Career() {
               />
                <label
                 htmlFor="panel-6"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Program Officer</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>
@@ -379,7 +379,7 @@ function Career() {
               />
               <label
                 htmlFor="panel-1"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Volunteers</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>
@@ -406,7 +406,7 @@ function Career() {
               />
                <label
                 htmlFor="panel-1"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Volunteers</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>
@@ -433,7 +433,7 @@ function Career() {
               />
                <label
                 htmlFor="panel-3"
-                className="relative flex flex-col bg-white text-3xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
+                className="relative flex flex-col bg-white text-2xl font-semibold  text-[#FF8B1F] pt-4 pb-10 px-4 shadow border-b border-[#B0AEA4]"
               >
                 <span className='pb-7'>Volunteers</span>
                 <span className='text-sm text-black'>Onsite - Lagos</span>

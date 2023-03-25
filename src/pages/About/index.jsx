@@ -31,7 +31,7 @@ function About() {
           >
             <main className=" sm:px-6  z-10 max-w-[1920px] w-full px-4 mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
               <div className="  lg:w-1/2 ">
-                <h2 className="lg:text-8xl tracking-tight leading-10 font-bold  text-left text-HomeWhite sm:leading-none text-3xl md:text-[53px] ">
+                <h2 className="lg:text-6xl tracking-tight leading-10 font-bold  text-left text-HomeWhite sm:leading-none text-3xl md:text-[53px] ">
                   We Pride <span className="text-[#9C5513]">Ourselves</span> in
                   giving back to the vulnerable.
                 </h2>
@@ -74,7 +74,7 @@ function About() {
             <div>
               <img src={"/img/about-hero-1.png"} alt="What's happening" />
             </div>
-            <div className="my-8 lg:flex lg:flex-col  -center lg:w-4/5">
+            <div className="my-8 lg:flex lg:flex-col  -center ">
               <span>
                 <p
                   className="text-sm font-bold leading-relaxed m-4 text-[#FF8B1F]
@@ -83,7 +83,7 @@ function About() {
                   Our Vision
                 </p>
               </span>
-              <h2 className="text-[#2C2917] text-left font-semibold text-3xl md:text-6xl">
+              <h2 className="text-[#2C2917] text-left font-semibold text-3xl md:text-4xl">
                 To build a place where people can come to find and discover
                 anything they might want to buy online
               </h2>
@@ -103,7 +103,7 @@ function About() {
             </div>
           </div>
           <div className="flex flex-col items-center lg:max-w-[1920px] lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8">
-            <div className="my-8 lg:flex lg:flex-col  -center lg:w-4/5">
+            <div className="my-8 lg:flex lg:flex-col  -center ">
               <span>
                 <p
                   className="text-sm font-bold leading-relaxed m-4 text-[#FF8B1F]
@@ -135,7 +135,7 @@ function About() {
             </div>
           </div>
         </section>
-        <section className="bg-white p-8 lg:px-40 w-full lg:mt-28">
+        <section className="bg-white p-8 lg:px-40 w-full lg:mt-12">
           <span className="flex justify-center">
             <p
               className="text-lg font-bold leading-relaxed m-4 text-[#FF8B1F]
@@ -162,10 +162,11 @@ function About() {
                   <SwiperSlide>
                     <img src={"/img/abs.png"} alt="What's happening" className='w-auto' />
                   </SwiperSlide>
+                  
                 </Swiper>
               </div>
             </div>
-            <div className="my-8 lg:flex lg:flex-col  -center lg:w-4/5">
+            <div className="my-8 lg:flex lg:flex-col  -center ">
               <h2 className="text-[#2C2917] text-left font-semibold text-3xl md:text-4xl">
                 To build a place where people can come to find and discover
                 anything they might want to buy online

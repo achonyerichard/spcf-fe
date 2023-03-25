@@ -16,13 +16,13 @@ import Onboarding from "./pages/Onboarding";
 import Otp from "./pages/Otp";
 import Register from "./pages/Register";
 import SuperMarket from "./pages/Supermarket";
-
+import { useAuthContext } from "./hooks/useAuthContext";
 
 
 
 
 function App() {
-
+  const {user}= useAuthContext()
  
 
   return (
@@ -34,7 +34,7 @@ function App() {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/career" element={<Career />} />
       <Route path="/centers" element={<Center />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={!user ? <Login /> : <Navigate to ="/"/>} />
       <Route path="/register" element={<Register />} />
       <Route path="/otp" element={<Otp />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />

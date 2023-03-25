@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
   const [step, setStep] = useState(1);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const nextStep = () => {
     setStep(step + 1);
@@ -19,9 +19,9 @@ const ForgotPassword = () => {
   const otpChange = () => {
     setStep(step + 1);
   };
-  const confirmPassword=()=>{
+  const confirmPassword = () => {
     setStep(step + 1);
-  }
+  };
   return (
     <>
       <section className=" min-h-screen flex flex-col items-center justify-center">
@@ -76,22 +76,22 @@ const ForgotPassword = () => {
                     <input
                       className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
                       type="text"
-                      maxlength="1"
+                      maxLength="1"
                     />
                     <input
                       className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
                       type="text"
-                      maxlength="1"
+                      maxLength="1"
                     />
                     <input
                       className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
                       type="text"
-                      maxlength="1"
+                      maxLength="1"
                     />
                     <input
                       className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
                       type="text"
-                      maxlength="1"
+                      maxLength="1"
                     />
                   </div>
                   <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300">
@@ -112,7 +112,7 @@ const ForgotPassword = () => {
                     className="block  tracking-wide text-gray-700 text-lg font-medium mb-2"
                     htmlFor="grid-first-name"
                   >
-                     Password
+                    Password
                   </label>
                   <div className="relative">
                     <input
@@ -139,7 +139,7 @@ const ForgotPassword = () => {
                     className="block  tracking-wide text-gray-700 text-lg font-medium mb-2"
                     htmlFor="grid-first-name"
                   >
-                  Confirm  Password
+                    Confirm Password
                   </label>
                   <div className="relative">
                     <input
@@ -167,34 +167,37 @@ const ForgotPassword = () => {
                 </button>
               </form>
             )}
-          
           </div>
-         
         </div>
         {step === 4 && (
-              <div className="bg-[#F7F7F7]   shadow-xl w-[424px] p-5 items-center">
-                <div className="md:w-full px-5">
-                  <div className="flex justify-center ">
-                    <img
-                      // src={logo}
-                      src={"/img/success.png"}
-                      alt=" Logo"
-                    />
-                  </div>
-                  <h1 className="text-black text-xl pt-5 text-center leading-6">
-                  You Have Successfully 
-                    <br /> Changed Password
-                  </h1>
-                  <p className="text-[#828282] text-lg pt-5 text-center">
-                  Password have been changed to your desired password. Kindly keep it private.
-                   
-                  </p>
-                  <button className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300 w-full mt-10" onClick={()=>{navigate('/login')}}>
-                    Go to Login
-                  </button>
-                </div>
+          <div className="bg-[#F7F7F7]   shadow-xl w-[424px] p-5 items-center">
+            <div className="md:w-full px-5">
+              <div className="flex justify-center ">
+                <img
+                  // src={logo}
+                  src={"/img/success.png"}
+                  alt=" Logo"
+                />
               </div>
-            )}
+              <h1 className="text-black text-xl pt-5 text-center leading-6">
+                You Have Successfully
+                <br /> Changed Password
+              </h1>
+              <p className="text-[#828282] text-lg pt-5 text-center">
+                Password have been changed to your desired password. Kindly keep
+                it private.
+              </p>
+              <button
+                className="bg-[#FF8B1F] rounded-3xl text-white py-3 hover:scale-105 duration-300 w-full mt-10"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Go to Login
+              </button>
+            </div>
+          </div>
+        )}
         {step > 1 && step < 4 && (
           <div className="bg-[#F7F7F7] mt-10  shadow-xl w-[424px] p-5 items-center">
             <div className=" text-md flex justify-center items-center text-black">

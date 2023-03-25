@@ -1,10 +1,13 @@
 import axios from 'axios'
 import React ,{useState} from 'react'
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 
 import { useAuthContext } from './useAuthContext'
 
 const useLogin = (props) => {
+    const navigate = useNavigate();
     const [error, setError]= useState(null)
     const [loading, setLoading]= useState(null)
     // const  { dispatch }  = useAuthContext()
@@ -37,6 +40,7 @@ const useLogin = (props) => {
 
             dispatch({type:'LOGIN', payload:json.beneficiary})
             setLoading(false)
+            navigate("/")
         }
     }
 
