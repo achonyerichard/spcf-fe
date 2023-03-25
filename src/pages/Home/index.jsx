@@ -23,14 +23,16 @@ function Home() {
   return (
     <>
       <Nav />
-      <main>
+      <main className="overflow-hidden">
+        <section className="">
         <Swiper
           centeredSlides
+          spaceBetween={30}
           pagination={{
             clickable: true,
           }}
           autoplay={{
-            delay: 7000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           modules={[Autoplay, Navigation, Pagination]}
@@ -38,9 +40,9 @@ function Home() {
         >
           <SwiperSlide>
             <div
-              className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed bg-no-repeat  `}
+              className={` h-screen w-auto  flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
             >
-              <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+              <main className=" sm:px-6  z-10    lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                 <div className="  lg:w-1/2 ">
                   <h2 className="lg:text-7xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-3xl md:text-[53px] ">
                     Join Hands To Make The Lives of An{" "}
@@ -76,9 +78,9 @@ function Home() {
               </main>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <div
-              className={` h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10 bg-cover bg-center bg-fixed  bg-no-repeat `}
+              className={`relative h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
             >
               <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                 <div className="  lg:w-1/2 ">
@@ -115,8 +117,10 @@ function Home() {
                 </div>
               </main>
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
+        </section>
+      
 
         <section className="mt-10 mb-20">
           <div className="container mx-auto ">
