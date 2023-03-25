@@ -8,6 +8,7 @@
 body{
   font-family: 'Inter', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;
+scroll-behavior: smooth;
 }
 
 /* Navbar Component */

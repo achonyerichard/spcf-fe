@@ -24,19 +24,18 @@ const useLogin = (props) => {
         });
         const json = await response.data
 
-        console.log("json",json);
-        console.log("res", response);
+        
 
         if (json.err) {
           setLoading(false);
           setError(json.err);
-          console.log("error", json.err);
+         
         }
         if(!json.err){
             console.log("welcome");
            
             localStorage.setItem("user", JSON.stringify(json.beneficiary));
-                console.log(dispatch);
+               
 
             dispatch({type:'LOGIN', payload:json.beneficiary})
             setLoading(false)
