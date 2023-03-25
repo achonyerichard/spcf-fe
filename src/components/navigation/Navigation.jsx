@@ -432,55 +432,17 @@ const Navigation = () => {
                   <p className="text-2xl font-medium">Donate</p>
                 </Link>
               </p>
+              <div  onClick={() => setIsActive(false)}   className="flex items-center space-x-2 py-2 px-4 transition duration-200  text-[#2C2917] group">
+              <button className="text-white p-2 bg-[#FF8B1F] rounded-[5px]   text-lg">
+                    <Link to={"/login"}>Soup Kitchen</Link>
+                  </button>
+              </div>
+
+             
             </nav>
           </div>
 
-          <nav className="absolute bottom-0 py-2">
-            {/* <div>
-                <a
-                 
-                  onClick={() => setIsActive(false)}
-                  className="flex items-center space-x-2 py-2 px-4 transition duration-200  text-[#2C2917] group"
-                >
-                  <FaUser className="text-3xl text-[#2C2917] " />{" "}
-                  <Link
-                    to="/profile"
-                    className="block text-sm px-2 py-4 hover:bg-black transition text-[#2C2917] duration-300"
-                  >
-                    <p className="text-2xl font-medium">Edit Profile</p>
-                  </Link>
-                </a>
-                <a
-                  href="#"
-                  onClick={() => setIsActive(false)}
-                  className="flex items-center space-x-2 py-2 px-4 mx-4 transition duration-200 hover:bg-gray-700 text-[#2C2917] group bg-[#2C2917] "
-                >
-                  <AiOutlineLogout className="text-3xl text-appWhite " />{" "}
-                  <div
-     
-                    className="block text-sm px-2 py-2  hover:bg-black transition text-[#2C2917] duration-300 cursor-pointer"
-                  >
-                    <p className="text-2xl font-medium text-appWhite">Logout</p>
-                  </div>
-                </a>
-              </div> */}
-
-            <button className="text-appWhite p-3 bg-appOrange lg:rounded-[5px] w-full h-[60px] text-xl mx-5">
-              <span
-                className="hover:underline"
-                onClick={() => setIsActive(false)}
-              >
-                <Link href={"/auth/login"}>Login</Link>
-              </span>
-              /
-              <span
-                className="hover:underline"
-                onClick={() => setIsActive(false)}
-              >
-                <Link href={"/register"}>Register</Link>
-              </span>
-            </button>
-          </nav>
+        
         </aside>
       )}
     </nav>
