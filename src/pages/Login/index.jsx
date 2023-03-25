@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     console.log("kkkkk",error);
     await login(email, password);
-  
+  setIsVisible(true)
    
   }
 
