@@ -78,7 +78,7 @@ function Home() {
               </main>
             </div>
           </SwiperSlide>
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <div
               className={`relative h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
             >
@@ -117,7 +117,7 @@ function Home() {
                 </div>
               </main>
             </div>
-          </SwiperSlide> */}
+          </SwiperSlide>
         </Swiper>
         </section>
       

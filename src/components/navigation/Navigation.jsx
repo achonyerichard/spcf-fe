@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { BsFillQuestionCircleFill, BsPlusLg } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import useLogout from "../../hooks/useLogout";
 
 
 const Navigation = () => {
   const { user } = useAuthContext();
+  const { logout } = useLogout();
 
   const [isActive, setIsActive] = useState(false);
   const [nav, setNav] = useState(false);
@@ -220,8 +222,8 @@ const Navigation = () => {
                 >
                   <li>
                     <p
-                    
-                      className=" dropdown-item text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100
+                    onClick={()=>logout()}
+                      className="cursor-pointer dropdown-item text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100
           "
                       href="#"
                     >

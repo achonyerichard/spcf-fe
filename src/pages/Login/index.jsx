@@ -6,7 +6,7 @@ const Login = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+const type = 0
 
 
   const { login, error, loading } = useLogin();
@@ -14,7 +14,7 @@ const Login = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     console.log("kkkkk",error);
-    await login(email, password);
+    await login(email, password,type);
   setIsVisible(true)
    
   }

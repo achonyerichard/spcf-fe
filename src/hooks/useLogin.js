@@ -14,13 +14,14 @@ const useLogin = (props) => {
     const { dispatch } = useAuthContext();
 
 
-    const login = async (email,password) =>{
+    const login = async (email,password,type) =>{
         setLoading(true)
         setError(null)
 
         const response = await axios.post(`https://spcf-api.onrender.com/beneficiary/login`, {
             email: email,
             password: password,
+            type:type
         });
         const json = await response.data
 

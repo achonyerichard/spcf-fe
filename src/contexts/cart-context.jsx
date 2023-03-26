@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createContext, useState,useEffect } from "react";
 
 
@@ -60,7 +61,20 @@ export const CartProvider = ({ children }) => {
   });
   const [cartCount,setCartCount] = useState(0);
   const [cartTotal,setCartTotal] = useState(0)
-
+const [category, setCategory]=useState([])
+useEffect(() => {
+ 
+  axios.get("https://spcf-api.onrender.comy/categories")
+    .then(response => {
+      setCategory(response.data);
+     
+    })
+    .catch(error => {
+     
+      
+    });
+}, []);
+console.log("hyyhy",category);
 
   useEffect(() => {
    const newCartCount = cartItem.reduce((total,cartItem)=> total + cartItem.quantity,0)
