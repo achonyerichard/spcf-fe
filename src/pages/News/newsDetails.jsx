@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import getBlogs from "../../data/blogData";
-
+import { NewsContext } from "../../contexts/news-context";
 import Nav from "../../components/navigation/Navigation";
 import Footer from "../../components/footer";
 import { useParams } from "react-router-dom";
-import useApi from "../../hooks/useApi";
+
 
 function NewsDetails() {
   const { id } = useParams();
-  const [data, isLoading, error] = useApi(
-    "https://spcf-api.onrender.com/news/public"
-  );
+  const { data, isLoading,error, } = useContext(NewsContext);
   const [filteredData, setFilteredData] = useState([]);
 
 

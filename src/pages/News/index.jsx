@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import getBlogs from "../../data/blogData";
-
+import { NewsContext } from "../../contexts/news-context";
 // import './App.css'
 
 import { Link, NavLink } from "react-router-dom";
@@ -9,13 +9,12 @@ import Nav from "../../components/navigation/Navigation";
 import Footer from "../../components/footer";
 import { BsSearch } from "react-icons/bs";
 import { FaEye, FaFilter } from "react-icons/fa";
-import useApi from "../../hooks/useApi";
+
 
 function News() {
  
-  const [data, isLoading, error] = useApi(
-    "https://spcf-api.onrender.com/news/public"
-  );
+  const { data, isLoading,error, } = useContext(NewsContext);
+ 
 
 
   return (
