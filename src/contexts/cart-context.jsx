@@ -5,12 +5,12 @@ import { createContext, useState,useEffect } from "react";
 const addCartItem = (cartItem, productToAdd) => {
 
   const existingCartItem = cartItem.find(
-    (cartItem) => cartItem.id === productToAdd.id
+    (cartItem) => cartItem._id === productToAdd._id
   );
 
   if (existingCartItem) {
     return cartItem.map((cartItem) =>
-      cartItem.id === productToAdd.id
+      cartItem._id === productToAdd._id
         ? ({ ...cartItem, quantity: cartItem.quantity + 1 })
         : cartItem
     );
@@ -21,21 +21,21 @@ const addCartItem = (cartItem, productToAdd) => {
 
 const removeCartItem = (cartItem, cartItemToRemove) => {
   const existingCartItem = cartItem.find(
-    (cartItem) => cartItem.id === cartItemToRemove.id
+    (cartItem) => cartItem._id === cartItemToRemove._id
   );
 
   if (existingCartItem.quantity === 1) {
-    return cartItem.filter((cartItem) => cartItem.id !== cartItemToRemove.id);
+    return cartItem.filter((cartItem) => cartItem._id !== cartItemToRemove._id);
   }
 
   return cartItem.map((cartItem) =>
-      cartItem.id === cartItemToRemove.id
+      cartItem._id === cartItemToRemove._id
         ? { ...cartItem, quantity: cartItem.quantity - 1 }
         : cartItem
   )
 }
 const clearCartItem =(cartItem,cartItemToClear) =>{
-  return cartItem.filter((cartItem) => cartItem.id !== cartItemToClear.id);
+  return cartItem.filter((cartItem) => cartItem._id !== cartItemToClear._id);
 }
 
 
@@ -61,20 +61,7 @@ export const CartProvider = ({ children }) => {
   });
   const [cartCount,setCartCount] = useState(0);
   const [cartTotal,setCartTotal] = useState(0)
-const [category, setCategory]=useState([])
-useEffect(() => {
- 
-  axios.get("https://spcf-api.onrender.com/categories")
-    .then(response => {
-      setCategory(response.data);
-     
-    })
-    .catch(error => {
-     
-      
-    });
-}, []);
-console.log("hyyhy",category);
+
 
   useEffect(() => {
    const newCartCount = cartItem.reduce((total,cartItem)=> total + cartItem.quantity,0)
@@ -90,6 +77,7 @@ console.log("hyyhy",category);
   };
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItem));
+    console.log("ct",cartItem);
   }, [cartItem]);
 
   

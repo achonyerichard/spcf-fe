@@ -15,7 +15,9 @@ const SuperMarket = () => {
   const [cartClicked, setCartClicked] = useState("");
   const cartAdd = (product) => {
     addItemToCart(product);
-    setCartClicked(product.id);
+    setCartClicked(product._id);
+    console.log("product",product);
+    console.log(cartItem);
   };
   const { productData } = useContext(ProductsContext);
   const { categoryData } = useContext(ProductsContext);
@@ -327,7 +329,7 @@ const SuperMarket = () => {
                           </span>
                           <span
                             className={`${
-                              cartClicked === product.id && "bg-orange-200/50 "
+                              cartClicked === product?._id && "bg-orange-200/50 "
                             } bg-white  rounded-full  text-xs font-bold  leading-none flex items-center`}
                           >
                             <BsCart3
