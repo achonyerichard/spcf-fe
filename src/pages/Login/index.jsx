@@ -6,24 +6,20 @@ const Login = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-const type = 0
 
 
   const { login, error, loading } = useLogin();
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("kkkkk",error);
-    await login(email, password,type);
-  setIsVisible(true)
-   
+    console.log("kkkkk", error);
+    await login(email, password);
+    setIsVisible(true);
   }
-
 
   return (
     <div>
       {isVisible && error && (
-        
         <div className="relative ease-out duration-5000">
           <div className="absolute top-0 right-1">
             <div className="bg-red-100 p-5 w-full ">
@@ -32,7 +28,7 @@ const type = 0
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   className="flex-none fill-current text-red-500 h-4 w-4 cursor-pointer"
-                  onClick={()=>setIsVisible(false)}
+                  onClick={() => setIsVisible(false)}
                 >
                   <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.597 17.954l-4.591-4.55-4.555 4.596-1.405-1.405 4.547-4.592-4.593-4.552 1.405-1.405 4.588 4.543 4.545-4.589 1.416 1.403-4.546 4.587 4.592 4.548-1.403 1.416z" />
                 </svg>

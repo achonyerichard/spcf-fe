@@ -49,7 +49,7 @@ function Home() {
                     <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
                     Counts
                   </h2>
-                  <div className="lg:w-1/2 flex justify-end lg:hidden ">
+                  <div className="lg:w-1/2 flex lg:justify-end justify-center lg:hidden ">
                     <img
                       alt="Hero Imge"
                       src={"/img/hero-slide-1.png"}
@@ -89,7 +89,7 @@ function Home() {
                     <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
                     Counts
                   </h2>
-                  <div className="lg:w-1/2 flex justify-end lg:hidden">
+                  <div className="lg:w-1/2 flex lg:justify-end justify-center lg:hidden">
                     <img
                       alt="Hero Imge"
                       src={"/img/hero-slide-1.png"}

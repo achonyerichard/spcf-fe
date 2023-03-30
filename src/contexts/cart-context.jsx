@@ -64,7 +64,7 @@ export const CartProvider = ({ children }) => {
 const [category, setCategory]=useState([])
 useEffect(() => {
  
-  axios.get("https://spcf-api.onrender.comy/categories")
+  axios.get("https://spcf-api.onrender.com/categories")
     .then(response => {
       setCategory(response.data);
      

@@ -166,13 +166,13 @@ function Checkout() {
                       type="text"
                       id="promo"
                       placeholder="Please Enter Your Promo Code"
-                      className="p-3 text-sm w-[242px] bg-[#EEEEEE]"
+                      className="p-3 text-sm  bg-[#EEEEEE]"
                     />
                     </div>
                    
                <div className="w-1/3">
-               <button className="bg-[#FF8B1F] hover:bg-[#FCD733] md:px-2 px-2 py-3 text-sm text-white capitalize">
-                    Apply Coupon
+               <button className="bg-[#FF8B1F] hover:bg-[#FCD733] w-full md:px-2 px-2 py-3 text-sm text-white capitalize">
+                    Coupon 
                   </button>
                </div>
                  

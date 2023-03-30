@@ -21,7 +21,7 @@ const useLogin = (props) => {
         const response = await axios.post(`https://spcf-api.onrender.com/beneficiary/login`, {
             email: email,
             password: password,
-            type:type
+            
         });
         const json = await response.data
 
