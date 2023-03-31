@@ -10,19 +10,22 @@ import { CartContext } from "../../contexts/cart-context";
 import { ProductsContext } from "../../contexts/products-context";
 
 const SuperMarket = () => {
-  const { cartItem, cartCount, addItemToCart, cartTotal } =
-    useContext(CartContext);
+  const { cartItem, cartCount, addItemToCart, cartTotal,  } = useContext(CartContext);
+  const {  filterProducts,filteredData,setFilteredData,productData,categoryData } = useContext(ProductsContext);
   const [cartClicked, setCartClicked] = useState("");
   const cartAdd = (product) => {
     addItemToCart(product);
     setCartClicked(product._id);
-    console.log("product",product);
+    console.log("product", product);
     console.log(cartItem);
   };
-  const { productData } = useContext(ProductsContext);
-  const { categoryData } = useContext(ProductsContext);
+
 
   console.log("holla", categoryData);
+
+  const filterItem = (category) => {
+   filterProducts(category)
+  }
 
   return (
     <>
@@ -67,7 +70,7 @@ const SuperMarket = () => {
                     />
                     <span className="flex items-center material-symbols-outlined absolute left-2 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
                       {" "}
-                      <BsSearch className={`text-2xl text-[#908D7E] mr-2`} />
+                      <BsSearch className={`text-xl text-[#908D7E] mr-2`} />
                     </span>
                   </div>
                   <div>
@@ -120,16 +123,40 @@ const SuperMarket = () => {
               </div>
             </div>
             <div className="w-full max-w-[1920px]  mx-auto ">
-              <div className="text-appBlack lg:flex justify-center  lg:gap-4 lg:pt-10 pt-5">
+              <div className="text-appBlack md:flex justify-center  lg:gap-4 lg:pt-10 pt-5">
                 <div className=" block  md:w-1/5">
                   <div className=" lg:border-gray-200 border lg:h-auto  ">
                     <div className="flex justify-center">
                       <ul className="w-full divide-y divide-gray-200 ">
+                      <li  className="py-5  px-5">
+                            <div className="flex items-center space-x-4">
+                              <div className="flex-1 min-w-0">
+                                <p
+                                  className="text-xl text-gray-600 truncate  capitalize cursor-pointer"
+                                  onClick={() => setFilteredData(productData)}
+                                >
+                                  All
+                                </p>
+                              </div>
+                              <div className="inline-flex items-center text-base font-semibold text-gray-900">
+                                <svg
+                                  className="fill-current h-4 w-4 -rotate-90"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"
+                                >
+                                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                                </svg>
+                              </div>
+                            </div>
+                          </li>
                         {categoryData?.map((category) => (
                           <li key={category?._id} className="py-5  px-5">
                             <div className="flex items-center space-x-4">
                               <div className="flex-1 min-w-0">
-                                <p className="text-xl text-gray-600 truncate  capitalize">
+                                <p
+                                  className="text-xl text-gray-600 truncate  capitalize cursor-pointer"
+                                  onClick={() => filterItem(category)}
+                                >
                                   {category?.name}
                                 </p>
                               </div>
@@ -294,54 +321,109 @@ const SuperMarket = () => {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 pt-10  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5">
-                  {productData.map((product) => (
-                    <div
-                      className="flex-shrink-0  relative overflow-hidden bg-white shadow-lg rounded-lg border border-gray-200"
-                      key={product?._id}
-                    >
-                      <div className="relative pt-5 px-10 flex items-center justify-center">
-                        <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"></div>
-                        <img
-                          className="relative w-40 object-fit"
-                          src={product?.image}
-                          alt="Product Image"
-                        />
+                {filteredData.length === 0 && (
+                  <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5">
+                    {productData.map((product) => (
+                      <div
+                        className="flex-shrink-0 h-auto relative overflow- bg-white shadow-lg rounded-lg border border-gray-200"
+                        key={product?._id}
+                      >
+                        <div className=" pt-5 px-10 flex items-center justify-center">
+                       
+                          <img
+                            className="relative w-40 object-fit"
+                            src={product?.image}
+                            alt="Product Image"
+                          />
+                        </div>
+                        <div className=" text-white px-6  mt-6">
+                          <div className="flex justify-center">
+                            <span className="px-3 text-lg opacity-75 -mb-1 text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
+                              {product?.category}
+                            </span>
+                          </div>
+                          <div className="flex justify-center pt-5">
+                            <span className=" text-lg  text-center text-black capitalize ">
+                              {product?.name}
+                            </span>
+                          </div>
+                          <div className="flex justify-between gap-2  items-center pt-3">
+                            <span className="  text-sm text-black flex font-medium">
+                              <span>&#8358;</span> <span>{product?.price}</span>
+                            </span>
+                            <span>
+                              {" "}
+                              <AiOutlineHeart className="text-2xl text-black" />
+                            </span>
+                            <span
+                              className={`${
+                                cartClicked === product?._id &&
+                                "bg-orange-200/50 "
+                              } bg-white  rounded-full  text-xs font-bold  leading-none flex items-center`}
+                            >
+                              <BsCart3
+                                className="text-2xl text-[#FF8B1F] cursor-pointer"
+                                onClick={() => cartAdd(product)}
+                              />
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <div className="relative text-white px-6  mt-6">
-                        <div className="flex justify-center">
-                          <span className="px-3 text-lg opacity-75 -mb-1 text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
-                            {product?.category}
-                          </span>
+                      
+                    ))}
+                  </div>
+                )}
+                {filteredData.length > 0 && (
+                  <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5">
+                    {filteredData.map((product) => (
+                      <div
+                        className=" relative overflow-hidden bg-white shadow-lg rounded-lg border border-gray-200"
+                        key={product?._id}
+                      >
+                        <div className="relative pt-5 px-10 flex items-center justify-center">
+                  
+                          <img
+                            className="relative w-full object-fit"
+                            src={product?.image}
+                            alt="Product Image"
+                          />
                         </div>
-                        <div className="flex justify-center pt-5">
-                          <span className=" text-lg  text-center text-black capitalize ">
-                            {product?.name}
-                          </span>
-                        </div>
-                        <div className="flex justify-between gap-2  items-center pt-3">
-                          <span className="  text-sm text-black flex font-medium">
-                            <span>&#8358;</span> <span>{product?.price}</span>
-                          </span>
-                          <span>
-                            {" "}
-                            <AiOutlineHeart className="text-2xl text-black" />
-                          </span>
-                          <span
-                            className={`${
-                              cartClicked === product?._id && "bg-orange-200/50 "
-                            } bg-white  rounded-full  text-xs font-bold  leading-none flex items-center`}
-                          >
-                            <BsCart3
-                              className="text-2xl text-[#FF8B1F] cursor-pointer"
-                              onClick={() => cartAdd(product)}
-                            />
-                          </span>
+                        <div className="relative text-white px-6  mt-6">
+                          <div className="flex justify-center">
+                            <span className="px-3 text-lg opacity-75 -mb-1 text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
+                              {product?.category}
+                            </span>
+                          </div>
+                          <div className="flex justify-center pt-5">
+                            <span className=" text-lg  text-center text-black capitalize ">
+                              {product?.name}
+                            </span>
+                          </div>
+                          <div className="flex justify-between gap-2  items-center pt-3">
+                            <span className="  text-sm text-black flex font-medium">
+                              <span>&#8358;</span> <span>{product?.price}</span>
+                            </span>
+                            <span>
+                              {" "}
+                              <AiOutlineHeart className="text-2xl text-black" />
+                            </span>
+                            <span
+                              className={`${
+                                cartClicked === product?._id &&
+                                "bg-orange-200/50 "
+                              } bg-white  rounded-full  text-xs font-bold  leading-none flex items-center`}
+                            >
+                              <BsCart3
+                                className="text-2xl text-[#FF8B1F] cursor-pointer"
+                                onClick={() => cartAdd(product)}
+                              />
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
