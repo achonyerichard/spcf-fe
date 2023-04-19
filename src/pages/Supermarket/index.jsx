@@ -123,7 +123,7 @@ const SuperMarket = () => {
               </div>
             </div>
             <div className="w-full max-w-[1920px]  mx-auto ">
-              <div className="text-appBlack md:flex justify-center  lg:gap-4 lg:pt-10 pt-5">
+              <div className=" md:flex justify-center  lg:gap-4 lg:pt-10 pt-5">
                 <div className=" block  md:w-1/5">
                   <div className=" lg:border-gray-200 border lg:h-auto  ">
                     <div className="flex justify-center">
@@ -322,7 +322,7 @@ const SuperMarket = () => {
                   </div>
                 </div>
                 {filteredData.length === 0 && (
-                  <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5">
+                  <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5 lg:h-72">
                     {productData.map((product) => (
                       <div
                         className="flex-shrink-0 h-auto relative overflow- bg-white shadow-lg rounded-lg border border-gray-200"
@@ -331,19 +331,19 @@ const SuperMarket = () => {
                         <div className=" pt-5 px-10 flex items-center justify-center">
                        
                           <img
-                            className="relative w-40 object-fit"
-                            src={product?.image}
+                            className="relative w-auto object-fit"
+                            src={product?.image?`${product?.image}`:"/img/logo.png"}
                             alt="Product Image"
                           />
                         </div>
-                        <div className=" text-white px-6  mt-6">
+                        <div className="  px-6  mt-6">
                           <div className="flex justify-center">
-                            <span className="px-3 text-lg opacity-75 -mb-1 text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
+                            <span className="px-3 text-xl opacity-75 -mb-1 font-semibold text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
                               {product?.category}
                             </span>
                           </div>
                           <div className="flex justify-center pt-5">
-                            <span className=" text-lg  text-center text-black capitalize ">
+                            <span className=" text-md  text-center text-black capitalize ">
                               {product?.name}
                             </span>
                           </div>
@@ -374,7 +374,7 @@ const SuperMarket = () => {
                   </div>
                 )}
                 {filteredData.length > 0 && (
-                  <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5">
+                  <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-2  md:gap-8 md:w-4/5 lg:h-72">
                     {filteredData.map((product) => (
                       <div
                         className=" relative overflow-hidden bg-white shadow-lg rounded-lg border border-gray-200"
@@ -384,18 +384,18 @@ const SuperMarket = () => {
                   
                           <img
                             className="relative w-full object-fit"
-                            src={product?.image}
+                            src={product?.image?`${product?.image}`:"/img/logo.png"}
                             alt="Product Image"
                           />
                         </div>
-                        <div className="relative text-white px-6  mt-6">
+                        <div className="  px-6  mt-6">
                           <div className="flex justify-center">
-                            <span className="px-3 text-lg opacity-75 -mb-1 text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
+                            <span className="px-3 text-xl opacity-75 -mb-1 font-semibold text-center text-[#FF8B1F] rounded-xl bg-[#FFF3E9] ">
                               {product?.category}
                             </span>
                           </div>
                           <div className="flex justify-center pt-5">
-                            <span className=" text-lg  text-center text-black capitalize ">
+                            <span className=" text-md  text-center text-black capitalize ">
                               {product?.name}
                             </span>
                           </div>

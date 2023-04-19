@@ -100,12 +100,12 @@ function Center() {
                   <div className="flex items-center">
                     <div className='flex items-center gap-2'>
                         <BiMap className='text-2xl  fill-[#FF8B1F]'/>
-                      <p className='text-xl text-black font-bold'>Locate</p>
+                      <p className='text-sm text-black font-semibold'>Locate</p>
                     </div>
                     <div className='flex grow'>
                      
                     </div>
-                    <div className='flex justify-end '>
+                    <div className='flex justify-end text-sm '>
                       <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
                     </div>
                   </div>
@@ -128,12 +128,40 @@ function Center() {
                   <div className="flex items-center">
                     <div className='flex items-center gap-2'>
                         <BiMap className='text-2xl  fill-[#FF8B1F]'/>
-                      <p className='text-xl text-black font-bold'>Locate</p>
+                      <p className='text-sm text-black font-semibold'>Locate</p>
                     </div>
                     <div className='flex grow'>
                      
                     </div>
                     <div className='flex justify-end '>
+                      <button className='p-2 text-sm rounded-sm  bg-[#FF8B1F] text-white'>View</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="  w-full ">
+                <img
+                  src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+                  alt=""
+                  class="rounded-lg w-full h-[125px] object-cover"
+                />
+                <div class="p-6 shadow-lg">
+                  <h2 class="font-bold mb-2 text-2xl text-[#2C2917]">
+                    Ikorodu
+                  </h2>
+                  <p class="text-[#908D7E] mb-2">
+                    69 Road off kachala street, opp shoprite Lagos state.
+                  </p>
+                  <div className="flex items-center">
+                    <div className='flex items-center gap-2'>
+                        <BiMap className='text-2xl  fill-[#FF8B1F]'/>
+                      <p className='text-sm text-black font-semibold'>Locate</p>
+                    </div>
+                    <div className='flex grow'>
+                     
+                    </div>
+                    <div className='flex justify-end text-sm '>
                       <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
                     </div>
                   </div>
@@ -156,40 +184,12 @@ function Center() {
                   <div className="flex items-center">
                     <div className='flex items-center gap-2'>
                         <BiMap className='text-2xl  fill-[#FF8B1F]'/>
-                      <p className='text-xl text-black font-bold'>Locate</p>
+                      <p className='text-sm text-black font-semibold'>Locate</p>
                     </div>
                     <div className='flex grow'>
                      
                     </div>
-                    <div className='flex justify-end '>
-                      <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="  w-full ">
-                <img
-                  src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
-                  alt=""
-                  class="rounded-lg w-full h-[125px] object-cover"
-                />
-                <div class="p-6 shadow-lg">
-                  <h2 class="font-bold mb-2 text-2xl text-[#2C2917]">
-                    Ikorodu
-                  </h2>
-                  <p class="text-[#908D7E] mb-2">
-                    69 Road off kachala street, opp shoprite Lagos state.
-                  </p>
-                  <div className="flex items-center">
-                    <div className='flex items-center gap-2'>
-                        <BiMap className='text-2xl  fill-[#FF8B1F]'/>
-                      <p className='text-xl text-black font-bold'>Locate</p>
-                    </div>
-                    <div className='flex grow'>
-                     
-                    </div>
-                    <div className='flex justify-end '>
+                    <div className='flex justify-end text-sm '>
                       <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
                     </div>
                   </div>
@@ -212,12 +212,12 @@ function Center() {
                   <div className="flex items-center">
                     <div className='flex items-center gap-2'>
                         <BiMap className='text-2xl  fill-[#FF8B1F]'/>
-                      <p className='text-xl text-black font-bold'>Locate</p>
+                      <p className='text-sm text-black font-semibold'>Locate</p>
                     </div>
                     <div className='flex grow'>
                      
                     </div>
-                    <div className='flex justify-end '>
+                    <div className='flex justify-end text-sm '>
                       <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
                     </div>
                   </div>
@@ -240,12 +240,12 @@ function Center() {
                   <div className="flex items-center">
                     <div className='flex items-center gap-2'>
                         <BiMap className='text-2xl  fill-[#FF8B1F]'/>
-                      <p className='text-xl text-black font-bold'>Locate</p>
+                      <p className='text-sm text-black font-semibold'>Locate</p>
                     </div>
                     <div className='flex grow'>
                      
                     </div>
-                    <div className='flex justify-end '>
+                    <div className='flex justify-end text-sm '>
                       <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
                     </div>
                   </div>

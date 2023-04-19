@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-body{
-  font-family: 'Inter', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;
-scroll-behavior: smooth;
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  scroll-behavior: smooth;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 /* Navbar Component */
 .nav {
   /* padding-top: 5px;
@@ -21,19 +23,17 @@ scroll-behavior: smooth;
   height: 6rem;
   display: flex;
   align-items: center;
-
 }
 
 @media (min-width: 1024px) {
   .nav {
-    background: #FCD733;
+    background: #fcd733;
   }
 }
 
 .nav.active {
   background: #fff;
 }
-
 
 .fixedTop {
   position: fixed;
@@ -57,8 +57,10 @@ scroll-behavior: smooth;
 .nav .dropdown ul a i {
   font-size: 12px;
 }
-.nav .dropdown ul a:hover, .nav .dropdown ul .active:hover, .nav .dropdown ul li:hover > a {
-  color: #CCDC;
+.nav .dropdown ul a:hover,
+.nav .dropdown ul .active:hover,
+.nav .dropdown ul li:hover > a {
+  color: #ccdc;
 }
 .nav .dropdown:hover > ul {
   opacity: 1;
@@ -77,9 +79,7 @@ scroll-behavior: smooth;
   visibility: visible;
 }
 
-
 @media (maxwidth: 400px) {
-  
   .hidden {
     display: none;
   }
@@ -94,10 +94,9 @@ scroll-behavior: smooth;
   width: 90%;
 }
 
-
 /* Career Accordion */
 .accordion label:after {
-  content: '^';
+  content: "^";
   position: absolute;
   right: 1em;
   color: black;
@@ -106,69 +105,61 @@ scroll-behavior: smooth;
 }
 
 .accordion input:checked + label:after {
-  content: '^';
-  line-height: .8em;
+  content: "^";
+  line-height: 0.8em;
   transform: rotate(0deg);
 }
 
-.accordion__content{
+.accordion__content {
   max-height: 0em;
   transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
 }
-input[name='panel']:checked ~ .accordion__content {
+input[name="panel"]:checked ~ .accordion__content {
   /* Get this as close to what height you expect */
   max-height: 50em;
 }
 
-
-.phone-container input{
-   background-color: white;
-   color: black;
+.phone-container input {
+  background-color: white;
+  color: black;
 
   padding: 10px;
-   border: 1px solid #DCDEDD;
+  border: 1px solid #dcdedd;
 }
 
-.phone-container input:focus{
-
-  border: 1px solid #DCDEDD;
+.phone-container input:focus {
+  border: 1px solid #dcdedd;
 }
-.phone-container select{
-    background-color: #fff;
-    color: black;
-    scrollbar-color: white;
-    border: 1px solid #DCDEDD;
-   
+.phone-container select {
+  background-color: #fff;
+  color: black;
+  scrollbar-color: white;
+  border: 1px solid #dcdedd;
 }
-.inputStyle{
-    background-color: #fff;
+.inputStyle {
+  background-color: #fff;
 }
 
-
-body{
-  margin:0;
+body {
+  margin: 0;
   padding: 0;
   font-family: sans-serif;
-  
- }
- 
- input[type="radio"] + label span {
-     transition: background .2s,
-       transform .2s;
- }
- 
- input[type="radio"] + label span:hover,
- input[type="radio"] + label:hover span{
-   transform: scale(1.2);
- } 
- 
- input[type="radio"]:checked + label span {
-   background-color:  #FF8B1F; 
-   box-shadow: 0px 0px 0px 2px white inset;
- }
- 
- input[type="radio"]:checked + label{
-    color:  #FF8B1F; 
- }
- 
- 
+}
+
+input[type="radio"] + label span {
+  transition: background 0.2s, transform 0.2s;
+}
+
+input[type="radio"] + label span:hover,
+input[type="radio"] + label:hover span {
+  transform: scale(1.2);
+}
+
+input[type="radio"]:checked + label span {
+  background-color: #ff8b1f;
+  box-shadow: 0px 0px 0px 2px white inset;
+}
+
+input[type="radio"]:checked + label {
+  color: #ff8b1f;
+}

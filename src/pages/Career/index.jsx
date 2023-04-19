@@ -69,7 +69,7 @@ function Career() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8 lg:px-20">
+          <div className="flex flex-col items-center lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8 ">
             <div className="flex ">
               <ul className="list-none mt-6 space-y-10">
                 <li className="py-2">
@@ -193,7 +193,7 @@ function Career() {
           </div>
         </section>
         <section className="bg-white p-8 lg:px-40 w-full lg:mt-28 lg:max-w-[1920px] ">
-          <div className="lg:flex flex-wrap text-center justify-center lg:px-40">
+          <div className="lg:flex flex-wrap text-center justify-center ">
             <div className="w-full  px-4">
               <h2 className="lg:text-5xl text-4xl font-semibold text-black">
                 <span className="text-[#FBCF09]">Career</span><br/> Opportunities
@@ -201,7 +201,7 @@ function Career() {
               
             </div>
           </div>
-          <div className="flex flex-col items-center lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8 lg:px-40">
+          <div className="flex flex-col items-center lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8 ">
             <div className="flex ">
               <ul className="list-none mt-6 space-y-10 accordion items-center ">
                 <li className="py-2">

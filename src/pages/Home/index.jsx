@@ -39,12 +39,12 @@ function Home() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div
+          <div
               className={` h-screen w-auto  flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
             >
-              <main className=" sm:px-6  z-10    lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+              <main className=" sm:px-6  z-10   px-2 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                 <div className="  lg:w-1/2 ">
-                  <h2 className="lg:text-7xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-3xl md:text-[53px] ">
+                  <h2 className="lg:text-5xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-2xl md:text-[53px] ">
                     Join Hands To Make The Lives of An{" "}
                     <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
                     Counts
@@ -53,7 +53,7 @@ function Home() {
                     <img
                       alt="Hero Imge"
                       src={"/img/hero-slide-1.png"}
-                      className="object-cover lg:w-[544px] lg:h-[489px]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+                      className="object-cover w-72 lg:w-[544px] lg:h-[489px]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
                     />
                   </div>
                   <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 animate-typing">
@@ -79,24 +79,24 @@ function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className={`relative h-screen w-full flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
+          <div
+              className={` h-screen w-auto  flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
             >
-              <main className=" sm:px-6  z-10 lg:max-w-[1920px] w-full px-4 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+              <main className=" sm:px-6  z-10   px-2 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
                 <div className="  lg:w-1/2 ">
-                  <h2 className="lg:text-7xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-3xl md:text-[53px] ">
+                  <h2 className="lg:text-5xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-2xl md:text-[53px] ">
                     Join Hands To Make The Lives of An{" "}
                     <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
                     Counts
                   </h2>
-                  <div className="lg:w-1/2 flex lg:justify-end justify-center lg:hidden">
+                  <div className="lg:w-1/2 flex lg:justify-end justify-center lg:hidden ">
                     <img
                       alt="Hero Imge"
                       src={"/img/hero-slide-1.png"}
-                      className="object-cover lg:w-[544px] lg:h-[489px] "
+                      className="object-cover w-72 lg:w-[544px] lg:h-[489px]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
                     />
                   </div>
-                  <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 ">
+                  <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 animate-typing">
                     Lets make the world a better place by contributing to the
                     lives of the needy in little ways.
                   </p>
