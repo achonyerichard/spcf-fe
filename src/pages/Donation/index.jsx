@@ -26,7 +26,7 @@ function Donation() {
     <>
       <Nav />
       <main className='mb-20'>
-        <div className="relative h-screen w-full flex md:px-40 flex-col md:flex-row items-center bg-blend-multiply bg-gray-600 justify-center md:justify-start text-center md:text-left bg-cover bg-center bg-[url('../public/img/donate-bg.png')]">
+        <div className="px-5 relative h-screen w-full flex md:px-40 flex-col md:flex-row items-center bg-blend-multiply bg-gray-600 justify-center md:justify-start text-center md:text-left bg-cover bg-center bg-[url('../public/img/donate-bg.png')]">
           {/* <div className="absolute top-0 right-0 bottom-0 left-0 bg-gr opacity-75"></div> */}
 
           <main className=" z-10 md:w-1/2">
