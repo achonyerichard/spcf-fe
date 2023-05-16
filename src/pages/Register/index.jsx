@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "react-phone-number-input/style.css";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
-import flags from "country-flag-icons/react/3x2";
 import { Link } from "react-router-dom";
 import useSignUp from "../../hooks/useSignup";
 import { useForm, Controller } from "react-hook-form";
 
 const Register = () => {
   const { signup, isLoading, error } = useSignUp();
+  
   const {
     register,
     handleSubmit,
@@ -15,11 +15,11 @@ const Register = () => {
     control,
     getValues,
   } = useForm();
+
   async function handleRegistration(data) {
     const { confirmpassword, ...rest } = data;
     const newData = { ...rest, type: 0, public: true };
     await signup(newData);
-   
   }
   const handleError = (errors) => {};
 
@@ -58,7 +58,7 @@ const Register = () => {
   return (
     <div>
       <section className=" min-h-screen flex flex-col items-center justify-center">
-        <div className="bg-[#F7F7F7]   shadow-xl w-[424px] p-5 items-center">
+        <div className="bg-[#F7F7F7]   shadow-xl w-[424px] p-5 ">
           <div className="md:w-full px-5">
             <div className="flex justify-center ">
               <img
@@ -205,7 +205,7 @@ const Register = () => {
                 </span>
               </div>
 
-              <div className="mt-5">
+              <div className="">
                 <label className="inline-flex items-center">
                   <input
                     type="checkbox"
@@ -239,7 +239,7 @@ const Register = () => {
             </form>
           </div>
         </div>
-        <div className="bg-[#F7F7F7] mt-10  shadow-xl w-[424px] p-5 items-center">
+        <div className="bg-[#F7F7F7] mt-2  shadow-xl w-[424px] p-5 ">
           <div className=" text-md flex justify-center items-center text-black">
             <p className="font-medium">
               You have an account?

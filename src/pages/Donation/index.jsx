@@ -31,18 +31,17 @@ function Donation() {
 
           <main className=" z-10 md:w-1/2">
             <div className="flex flex-col justify-center">
-              <h2 className="lg:text-5xl tracking-tight leading-10 font-bold  text-left md:text-left  text-white sm:leading-none text-3xl md:text-[53px]  capitalize ">
+              <h2 className="lg:text-4xl tracking-tight leading-10 font-bold  text-left md:text-left  text-white sm:leading-none text-3xl md:text-[53px]  capitalize ">
                 We Need Your Support <br/> To 
                 <span className="text-[#FBCF09]">Feed</span> the vulnerable.
               </h2>
-              <p className="mt-3 text-white sm:mt-5 text-lg font-normal sm:max-w-xl md:text-left text-center md:mt-5 ">
-                Lets make the world a better place by contributing to the lives
-                of the needy in little ways.
+              <p className="mt-3 text-white sm:mt-5 text-md font-normal sm:max-w-xl md:text-left text-center md:mt-5 ">
+              You can make charitable donations to our organization by filling out the form below. We accept debit/credit cards as well as Paypal.
               </p>
             </div>
           </main>
 
-          <div className="bg-white px-10 py-20 rounded-lg shadow  mx-auto lg:w-1/3 flex flex-col justify-end">
+          <div className="bg-white px-10 py-10 rounded-lg shadow  mx-auto lg:w-2/5 flex flex-col justify-end">
             <div className="py-3">
               <h2 className="lg:text-3xl tracking-tight leading-10 font-bold  text-left text-black sm:leading-none text-3xl md:text-[53px] ">
                 Make Your <span className="text-[#FBCF09]">Donations</span>{" "}
@@ -56,7 +55,16 @@ function Donation() {
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Put in your fullname."
+                  placeholder="First Name."
+                  className=" shadow p-3 w-full rounded mb- bg-[#EEEEEE]"
+                />
+              </div>
+              <div className="mb-5">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Last Name"
                   className=" shadow p-3 w-full rounded mb- bg-[#EEEEEE]"
                 />
               </div>
@@ -80,7 +88,7 @@ function Donation() {
                 />
               </div>
               <button className="block w-full bg-[#FF8B1F] text-white font-bold px-4 py-3 rounded-lg">
-                Submit
+                Donate Now
               </button>
             </form>
           </div>
@@ -88,20 +96,14 @@ function Donation() {
         <section className="bg-white p-8 lg:px-40 w-full lg:mt-28">
             <div className="flex flex-col items-center lg:max-w-[1920px] lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8">
               <div className=" lg:flex lg:flex-col  lg:w-4/5">
-                <h2 className="text-[#2C2917] text-left font-semibold text-3xl md:text-3xl">
+                <h2 className="text-[#2C2917] text-left font-semibold text-2xl md:text-3xl">
                 We assist thousands of vulnerable including senior citizens in alleviating hunger.
                 </h2>
                 <p className="text-[#605B47] text-md leading-[1.875rem] lg:mt-5">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                Partner with us, government agencies and corporate organizations tp facilitate the provision of financial assistance to the less privileged for economic empowerment and poverty eradication.
                 </p>
 
-                <div className="py-4 items-start">
-                  <Link href="/coming-soon">
-                    <button className="bg-[#FF8B1F] text-white p-2 lg:bg-appOrange lg:rounded-[5px] lg:w-[186px] lg:h-[45px] lg:text-xl">
-                      Donate
-                    </button>
-                  </Link>
-                </div>
+               
               </div>
               <div className="flex justify-end">
               <ul className="list-none ">
@@ -115,7 +117,7 @@ function Donation() {
                         <div>
                         <h2 className='text-black text-xl font-bold'>Make Donations</h2>
                           <h4 className="text-[#605B47]">
-                           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                          Donate now to feed the less privileged
                           </h4>
                         </div>
                       </div>
@@ -129,9 +131,9 @@ function Donation() {
                         </div>
                         <div>
                             <h2 className='text-black text-xl font-bold'>Health Care</h2>
-                          <h4 className="text-[#605B47]">
-                           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-                          </h4>
+                          <p className="text-[#605B47]">
+                          Support families with children who are under stress by providing healthcare and social work support
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -144,9 +146,9 @@ function Donation() {
                         </div>
                         <div>
                         <h2 className='text-black text-xl font-bold'>Senior Citizens</h2>
-                          <h4 className="text-[#605B47]">
-                           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-                          </h4>
+                          <p className="text-[#605B47]">
+                          Provide welfare packages of the elderly in the society.
+                          </p>
                         </div>
                       </div>
                     </li>

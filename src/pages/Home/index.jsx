@@ -25,102 +25,103 @@ function Home() {
       <Nav />
       <main className="overflow-hidden">
         <section className="">
-        <Swiper
-          centeredSlides
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay, Navigation, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-          <div
-              className={` h-screen w-auto  flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
-            >
-              <main className=" sm:px-6  z-10   px-2 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
-                <div className="  lg:w-1/2 ">
-                  <h2 className="lg:text-5xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-2xl md:text-[53px] ">
-                    Join Hands To Make The Lives of An{" "}
-                    <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
-                    Counts
-                  </h2>
-                  <div className="lg:w-1/2 flex lg:justify-end justify-center lg:hidden ">
+          <Swiper
+            centeredSlides
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay, Navigation, Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div
+                className={` h-screen w-auto  flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
+              >
+                <main className=" sm:px-6  z-10   px-2 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+                  <div className="  lg:w-1/2 ">
+                    <h2 className="lg:text-5xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-2xl md:text-[53px] ">
+                      Join Hands To Make The Lives of An{" "}
+                      <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
+                      Counts
+                    </h2>
+                    <div className="lg:w-1/2 flex lg:justify-end justify-center lg:hidden ">
+                      <img
+                        alt="Hero Imge"
+                        src={"/img/hero-slide-1.png"}
+                        className="object-cover w-72 lg:w-[544px] lg:h-[489px]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+                      />
+                    </div>
+                    <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 animate-typing">
+                      Lets make the world a better place by contributing to the
+                      lives of the needy in little ways.
+                    </p>
+                    <div className="mt-5 sm:mt-8">
+                      <div className="rounded-md ">
+                        <button className="w-[186px] h-[48px] flex items-center justify-center px-8 py-3  text-appWhite text-base leading-6 font-regular rounded-md text-white bg-[#FF8B1F] transition duration-150 ease-in-out md:py-4 md:px-10">
+                          Get started
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:w-1/2 lg:flex justify-end hidden">
                     <img
                       alt="Hero Imge"
                       src={"/img/hero-slide-1.png"}
-                      className="object-cover w-72 lg:w-[544px] lg:h-[489px]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+                      className="object-cover lg:w-[544px] lg:h-[489px] "
                     />
                   </div>
-                  <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 animate-typing">
-                    Lets make the world a better place by contributing to the
-                    lives of the needy in little ways.
-                  </p>
-                  <div className="mt-5 sm:mt-8">
-                    <div className="rounded-md ">
-                      <button className="w-[186px] h-[48px] flex items-center justify-center px-8 py-3  text-appWhite text-base leading-6 font-regular rounded-md text-white bg-[#FF8B1F] transition duration-150 ease-in-out md:py-4 md:px-10">
-                        Get started
-                      </button>
+                </main>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={` h-screen w-auto  flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#e7c21a]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
+              >
+                <main className=" sm:px-6  z-10   px-2 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
+                  <div className="  lg:w-1/2 ">
+                    <h2 className="lg:text-5xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-2xl md:text-[53px] ">
+                      Encourage Self Reliance Through
+                      <span className="text-[#9C5513]">
+                        {" "}
+                        Poverty Alleviation
+                      </span>{" "}
+                    </h2>
+                    <div className="lg:w-1/2 flex lg:justify-end justify-center lg:hidden ">
+                      <img
+                        alt="Hero Imge"
+                        src={"/img/hero-x.png"}
+                        className="object-cover w-72 lg:w-[544px] lg:h-[489px]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+                      />
+                    </div>
+                    <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 animate-typing">
+                      Join in our chaitable programs by helping the less
+                      privileged and developing our communites
+                    </p>
+                    <div className="mt-5 sm:mt-8">
+                      <div className="rounded-md ">
+                        <button className="w-[186px] h-[48px] flex items-center justify-center px-8 py-3  text-appWhite text-base leading-6 font-regular rounded-md text-white bg-[#FF8B1F] transition duration-150 ease-in-out md:py-4 md:px-10">
+                          Get started
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="lg:w-1/2 lg:flex justify-end hidden">
-                  <img
-                    alt="Hero Imge"
-                    src={"/img/hero-slide-1.png"}
-                    className="object-cover lg:w-[544px] lg:h-[489px] "
-                  />
-                </div>
-              </main>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div
-              className={` h-screen w-auto  flex items-center bg-[url('../img/hero.jpg')] bg-blend-multiply bg-[#FCD733]  justify-center text-center  z-10  bg-center  bg-no-repeat  `}
-            >
-              <main className=" sm:px-6  z-10   px-2 lg:mx-auto lg:px-20 flex lg:flex-row flex-col items-center justify-between pt-10">
-                <div className="  lg:w-1/2 ">
-                  <h2 className="lg:text-5xl tracking-tight leading-10 font-bold  text-left text-white sm:leading-none text-2xl md:text-[53px] ">
-                    Join Hands To Make The Lives of An{" "}
-                    <span className="text-[#9C5513]">Ordinary Citizen</span>{" "}
-                    Counts
-                  </h2>
-                  <div className="lg:w-1/2 flex lg:justify-end justify-center lg:hidden ">
+                  <div className="lg:w-1/2 lg:flex justify-end hidden">
                     <img
                       alt="Hero Imge"
-                      src={"/img/hero-slide-1.png"}
-                      className="object-cover w-72 lg:w-[544px] lg:h-[489px]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+                      src={"/img/hero-x.png"}
+                      className="object- lg:w-[544px] lg:h-[489px] "
                     />
                   </div>
-                  <p className="mt-3 text-white sm:mt-5 text-lg sm:max-w-xl text-left md:mt-5 animate-typing">
-                    Lets make the world a better place by contributing to the
-                    lives of the needy in little ways.
-                  </p>
-                  <div className="mt-5 sm:mt-8">
-                    <div className="rounded-md ">
-                      <button className="w-[186px] h-[48px] flex items-center justify-center px-8 py-3  text-appWhite text-base leading-6 font-regular rounded-md text-white bg-[#FF8B1F] transition duration-150 ease-in-out md:py-4 md:px-10">
-                        Get started
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="lg:w-1/2 lg:flex justify-end hidden">
-                  <img
-                    alt="Hero Imge"
-                    src={"/img/hero-slide-1.png"}
-                    className="object-cover lg:w-[544px] lg:h-[489px] "
-                  />
-                </div>
-              </main>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+                </main>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </section>
-      
 
         <section className="mt-10 mb-20">
           <div className="container mx-auto ">
@@ -139,9 +140,8 @@ function Home() {
                 </h2>
                 <p className="text-lg font-medium leading-relaxed m-4 text-[#605B47]">
                   {" "}
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim velit mollit.
-                  Exercitation veniam consequat sunt nostrud amet.
+                  We aim to boost self-reliance and the development of the
+                  needy, poor, as well as the elderly in the society.
                 </p>
               </div>
             </div>
@@ -167,9 +167,8 @@ function Home() {
                   <div className="flex items-center justify-center">
                     <div>
                       <h4 className="text-appTextGray  text-[#908D7E] text-center">
-                        Amet minim mollit non deserunt ullamco est sit aliqua
-                        dolor do amet sint. Velit officia consequat duis enim
-                        velit mollit.
+                        Purchase basic food items for the less-privileged
+                        community people at subsidized prices
                       </h4>
                     </div>
                   </div>
@@ -190,9 +189,8 @@ function Home() {
                   <div className="flex items-center justify-center">
                     <div>
                       <h4 className="text-appTextGray  text-[#908D7E] text-center">
-                        Amet minim mollit non deserunt ullamco est sit aliqua
-                        dolor do amet sint. Velit officia consequat duis enim
-                        velit mollit.
+                        Organise feeding programs to provide food for the poor
+                        ,homless and the elderly in our communities.
                       </h4>
                     </div>
                   </div>
@@ -217,9 +215,8 @@ function Home() {
                   <div className="flex items-center justify-center">
                     <div>
                       <h4 className="text-appTextGray  text-[#908D7E] text-center">
-                        Amet minim mollit non deserunt ullamco est sit aliqua
-                        dolor do amet sint. Velit officia consequat duis enim
-                        velit mollit.
+                        Generate unique barcodes for members to be identified by
+                        and qualify foor our discounts and offers
                       </h4>
                     </div>
                   </div>
@@ -242,9 +239,9 @@ function Home() {
                   <div className="flex items-center justify-center">
                     <div>
                       <h4 className="text-appTextGray  text-[#908D7E] text-center">
-                        Amet minim mollit non deserunt ullamco est sit aliqua
-                        dolor do amet sint. Velit officia consequat duis enim
-                        velit mollit.
+                        Our unique  systems helps verfiy and
+                        authenticate our users and welcome them to our
+                        opportunities.
                       </h4>
                     </div>
                   </div>
@@ -256,7 +253,7 @@ function Home() {
         <section className="bg-white p-8 lg:px-40 w-full lg:mt-28">
           <div className="flex flex-col items-center lg:max-w-[1920px] lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8">
             <div>
-              <img src={"/img/hero-2.png"} alt="What's happening" />
+              <img src={"/img/elderly.png"} alt="What's happening" />
             </div>
             <div
               className="my-8 lg:flex lg:flex-col  -center  "
@@ -271,14 +268,15 @@ function Home() {
                   About SPCF
                 </p>
               </span>
-              <h2 className="text-[#2C2917] text-left font-semibold text-3xl md:text-5xl">
-                <span className="text-[#FBCF09]">Senior</span> Citizens <br/>Are Not
-                Left behind
+              <h2 className="text-[#2C2917] text-left font-semibold text-2xl md:text-4xl">
+                <span className="text-[#FBCF09]">Senior</span> Citizens <br />
+                Are Not Left behind .
               </h2>
               <p className="text-[#605B47] leading-[1.875rem] lg:mt-5">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.
+                Here at SPCF, we value our elders and make it a prority to take
+                care of them either by feeding programs, discounted sales for
+                the eldery at our Supermart sotre or providing quality
+                healthcare .
               </p>
 
               <div className="py-4 items-start">
@@ -298,14 +296,14 @@ function Home() {
               data-aos-duration="3000"
               data-aos="zoom-in-down"
             >
-              <h2 className="text-[#2C2917] text-left font-semibold text-3xl md:text-5xl">
-                <span className="text-[#FBCF09]">Children</span><br/> are a key
-                player to sustainable growth.
+              <h2 className="text-[#2C2917] text-left font-semibold text-2xl md:text-4xl">
+                <span className="text-[#FBCF09]">Children</span>
+                <br /> are a key player to sustainable growth.
               </h2>
               <p className="text-[#605B47] leading-[1.875rem] lg:mt-5">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.
+                Our Community Development Programs are centered around the
+                children in our commuinites. We help develop thier skills and
+                give them opportunities through our job centers and programs.
               </p>
 
               <div className="py-4 items-start">
@@ -317,7 +315,7 @@ function Home() {
               </div>
             </div>
             <div className="flex justify-end">
-              <img src={"/img/hero-3.png"} alt="What's happening" />
+              <img src={"/img/child.png"} alt="What's happening" />
             </div>
           </div>
         </section>
@@ -331,19 +329,19 @@ function Home() {
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
             >
-              <div className="text-center py-20 flex flex-col justify-center">
+              <div className="text-center py-5 flex flex-col justify-center">
                 <p className="mt-3 text-[#FBCF09] sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5 lg:w-2/3 pb-5">
                   We are committed in reaching to feed thousands of vulnerables
                   and reach a wider audience by 2030.
                 </p>
-                <h2 className="lg:text-8xl tracking-tight leading-10 font-bold sm:text-5xl text-white sm:leading-none text-3xl md:text-6xl animate-typing whitespace-nowrap overflow-hidden">
+                <h2 className="lg:text-5xl tracking-tight leading-10 font-bold sm:text-5xl text-white sm:leading-none text-3xl md:text-6xl animate-typing whitespace-nowrap overflow-hidden">
                   785,500
                 </h2>
                 <p className="mt-3 text-white sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5 ">
                   People we target to reach.
                 </p>
 
-                <div className="mt-5 sm:mt-8 flex justify-center items-center">
+                <div className="mt-2 sm:mt-8 flex justify-center items-center">
                   <div className="rounded-md shadow">
                     <Link href="auth/login">
                       <button className="h-[48px] flex w-[186px] items-center justify-center px-8 py-3 text-appWhite text-base leading-6 font-regular rounded-md text-white bg-[#FF8B1F]  focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:px-10">
@@ -352,7 +350,7 @@ function Home() {
                     </Link>
                   </div>
                 </div>
-                <div className="relative pt-20">
+                <div className="relative pt-10">
                   <img alt="video" src={"img/video-bg.png"} />
                   <div className="absolute top-44 left-[250px]">
                     <img alt="player" src={"img/player.png"} />
@@ -370,8 +368,7 @@ function Home() {
               </p>
             </span>
             <p className="text-lg text=[#605B47] text-center">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint.{" "}
+              Stay up tp date visually with our recent activites around various communites.
             </p>
           </div>
           <div className="flex flex-wrap -mx-4 -mb-8">

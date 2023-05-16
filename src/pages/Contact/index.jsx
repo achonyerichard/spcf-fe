@@ -34,9 +34,7 @@ function Contact() {
                 Contact Us
               </h2>
               <p className="mt-3 text-white sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.
+               Need support ? Contact us via our help-line or email.
               </p>
               {/* <div className="mt-5 sm:mt-8 sm:flex justify-center">
             <div className="rounded-md shadow">
@@ -62,13 +60,11 @@ function Contact() {
               Get In Touch
             </h3>
             <p className="mt-3 text-gray-900 sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
+              Contact us via email through <span className='text-blue-500'>spcf@something.com</span> or our support line <span className='text-[#fcd733] text-bold'>(555) 555-5555</span>
             </p>
           </div>
 
-          <form className="flex flex-col md:justify-center md:items-center space-y-4">
+          <form className="flex flex-col md:justify-center md:items-center space-y-4 bg-white shadow-lg">
             <div className="w-full  px-3 mb-6 md:mb-0">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2"
@@ -96,6 +92,20 @@ function Contact() {
                 id="grid-email"
                 type="email"
                 placeholder="********@*****.**"
+              />
+            </div>
+            <div className="w-full  px-3 mb-6 md:mb-0">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2"
+                htmlFor="grid-first-name"
+              >
+                Subject
+              </label>
+              <input
+                className="appearance-none block w-full md:w-[388px] bg-[#F5F5F5] text-gray-700  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name"
+                type="text"
+                placeholder="Subject"
               />
             </div>
 

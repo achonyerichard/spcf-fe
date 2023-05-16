@@ -27,7 +27,7 @@ function Center() {
       <Nav />
       <main>
         <section className="mb-20">
-          <div className="relative h-[617px] w-full flex flex-col items-center justify-center text-center bg-cover bg-center bg-[url('../public/img/centers-bg.jpg')] ">
+          <div className="relative h-[617px] w-full flex flex-col items-center justify-center text-center bg-cover bg-center bg-[url('../public/img/center-bg.jpg')] ">
             <div className="absolute top-0 right-0 bottom-0 left-0 bg-gray-800 opacity-75"></div>
 
             <div className="px-4 sm:px-6 lg:px-8 z-10">
@@ -56,14 +56,14 @@ function Center() {
               </div>
             </div>
           </div>
-          <div className="md:mx-40 mx-5 shadow-xl   bg-white  -mt-12 z-20 relative px-5 md:py-5 py-5  rounded-lg">
+          <div className="md:mx-40 mx-5 shadow-xl   bg-white  -mt-10 z-20 relative px-5 md:py-3 py-5  rounded-lg">
             <div className="flex items-center gap-12">
               <div className="md:w-1/3">
                 <div className="relative flex items-center">
                   <input
                     id="twitter"
                     type="text"
-                    className="appearance-none  px-3 py-4 block w-full  text-base text-appBlack bg-[#F5F5F5]  focus:bg-white peer relative h-10 leading-tight focus:outline-none   pl-8 pr-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out  focus:drop-shadow-lg"
+                    className="appearance-none  px-3 py-4 block w-full  text-base text-appBlack bg-gray-200 rounded-lg  focus:bg-gray-300 peer relative h-10 leading-tight focus:outline-none   pl-8 pr-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out  focus:drop-shadow-lg"
                   />
                   <span className="flex items-center material-symbols-outlined absolute left-2 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
                     {" "}
@@ -72,8 +72,8 @@ function Center() {
                 </div>
               </div>
               <div className="md:w-2/3  flex ">
-                <div className="bg-[#F2F2F2] px-4 py-3 rounded-lg flex items-center gap-2">
-                  <h1 className="text-lg text-[#908D7E]">Filter</h1>
+                <div className="bg-gray-300 px-4 py-2 rounded-lg flex items-center gapx-2cursor-pointer">
+                  <h1 className="text-md text-[#908D7E]">Filter</h1>
                   <FaFilter className="text-[#908D7E]" />
                 </div>
               </div>
@@ -84,17 +84,17 @@ function Center() {
         <section className="bg-white  lg:px-40 w-full lg:mt-5 lg:max-w-[1920px] px-4 mb-20">
           <div className="flex flex-col  lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:py-8 ">
             <div className="grid md:grid-cols-2 md:gap-20 gap-6">
-              <div class="  w-full ">
+              <div className="  w-full ">
                 <img
                   src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
                   alt=""
-                  class="rounded-lg w-full h-[125px] object-cover"
+                  className="rounded-lg w-full h-[125px] object-cover"
                 />
-                <div class="p-6 shadow-lg">
-                  <h2 class="font-bold mb-2 text-2xl text-[#2C2917]">
+                <div className="p-4 shadow-lg">
+                  <h2 className="font-bold mb-2 text-xl text-[#2C2917]">
                     Ikorodu
                   </h2>
-                  <p class="text-[#908D7E] mb-2">
+                  <p className="text-[#908D7E] mb-2 text-sm">
                     69 Road off kachala street, opp shoprite Lagos state.
                   </p>
                   <div className="flex items-center">
@@ -106,23 +106,23 @@ function Center() {
                      
                     </div>
                     <div className='flex justify-end text-sm '>
-                      <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
+                      <button className='px-2 bg-[#FF8B1F] text-white text-sm rounded-lg '>View</button>
                     </div>
                   </div>
                   
                 </div>
               </div>
-              <div class="  w-full ">
+              <div className="  w-full ">
                 <img
                   src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
                   alt=""
-                  class="rounded-lg w-full h-[125px] object-cover"
+                  className="rounded-lg w-full h-[125px] object-cover"
                 />
-                <div class="p-6 shadow-lg">
-                  <h2 class="font-bold mb-2 text-2xl text-[#2C2917]">
-                    Ikorodu
+                <div className="p-4 shadow-lg">
+                  <h2 className="font-bold mb-2 text-xl text-[#2C2917]">
+                    Lagos Main
                   </h2>
-                  <p class="text-[#908D7E] mb-2">
+                  <p className="text-[#908D7E] mb-2 text-sm">
                     69 Road off kachala street, opp shoprite Lagos state.
                   </p>
                   <div className="flex items-center">
@@ -134,23 +134,23 @@ function Center() {
                      
                     </div>
                     <div className='flex justify-end '>
-                      <button className='p-2 text-sm rounded-sm  bg-[#FF8B1F] text-white'>View</button>
+                      <button className='px-2 text-sm rounded-lg  bg-[#FF8B1F] text-white'>View</button>
                     </div>
                   </div>
                   
                 </div>
               </div>
-              <div class="  w-full ">
+              <div className="  w-full ">
                 <img
                   src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
                   alt=""
-                  class="rounded-lg w-full h-[125px] object-cover"
+                  className="rounded-lg w-full h-[125px] object-cover"
                 />
-                <div class="p-6 shadow-lg">
-                  <h2 class="font-bold mb-2 text-2xl text-[#2C2917]">
-                    Ikorodu
+                <div className="p-4 shadow-lg">
+                  <h2 className="font-bold mb-2 text-xl text-[#2C2917]">
+                    Lagos Island
                   </h2>
-                  <p class="text-[#908D7E] mb-2">
+                  <p className="text-[#908D7E] mb-2 text-sm">
                     69 Road off kachala street, opp shoprite Lagos state.
                   </p>
                   <div className="flex items-center">
@@ -162,23 +162,23 @@ function Center() {
                      
                     </div>
                     <div className='flex justify-end text-sm '>
-                      <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
+                      <button className='px-2 bg-[#FF8B1F] text-white text-sm rounded-lg '>View</button>
                     </div>
                   </div>
                   
                 </div>
               </div>
-              <div class="  w-full ">
+              <div className="  w-full ">
                 <img
                   src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
                   alt=""
-                  class="rounded-lg w-full h-[125px] object-cover"
+                  className="rounded-lg w-full h-[125px] object-cover"
                 />
-                <div class="p-6 shadow-lg">
-                  <h2 class="font-bold mb-2 text-2xl text-[#2C2917]">
-                    Ikorodu
+                <div className="p-4 shadow-lg">
+                  <h2 className="font-bold mb-2 text-xl text-[#2C2917]">
+                    Ikeja
                   </h2>
-                  <p class="text-[#908D7E] mb-2">
+                  <p className="text-[#908D7E] mb-2 text-sm">
                     69 Road off kachala street, opp shoprite Lagos state.
                   </p>
                   <div className="flex items-center">
@@ -190,23 +190,23 @@ function Center() {
                      
                     </div>
                     <div className='flex justify-end text-sm '>
-                      <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
+                      <button className='px-2 bg-[#FF8B1F] text-white text-sm rounded-lg '>View</button>
                     </div>
                   </div>
                   
                 </div>
               </div>
-              <div class="  w-full  ">
+              <div className="  w-full  ">
                 <img
                   src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
                   alt=""
-                  class="rounded-lg w-full h-[125px] object-cover"
+                  className="rounded-lg w-full h-[125px] object-cover"
                 />
-                <div class="p-6 shadow-lg">
-                  <h2 class="font-bold mb-2 text-2xl text-[#2C2917]">
-                    Ikorodu
+                <div className="p-4 shadow-lg">
+                  <h2 className="font-bold mb-2 text-xl text-[#2C2917]">
+                    Badagry
                   </h2>
-                  <p class="text-[#908D7E] mb-2">
+                  <p className="text-[#908D7E] mb-2 text-sm">
                     69 Road off kachala street, opp shoprite Lagos state.
                   </p>
                   <div className="flex items-center">
@@ -218,23 +218,23 @@ function Center() {
                      
                     </div>
                     <div className='flex justify-end text-sm '>
-                      <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
+                      <button className='px-2 bg-[#FF8B1F] text-white text-sm rounded-lg '>View</button>
                     </div>
                   </div>
                   
                 </div>
               </div>
-              <div class="  w-full ">
+              <div className="  w-full ">
                 <img
                   src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
                   alt=""
-                  class="rounded-lg w-full h-[125px] object-cover"
+                  className="rounded-lg w-full h-[125px] object-cover"
                 />
-                <div class="p-6 shadow-lg">
-                  <h2 class="font-bold mb-2 text-2xl text-[#2C2917]">
-                    Ikorodu
+                <div className="p-4 shadow-lg">
+                  <h2 className="font-bold mb-2 text-xl text-[#2C2917]">
+                    Epe
                   </h2>
-                  <p class="text-[#908D7E] mb-2">
+                  <p className="text-[#908D7E] mb-2 text-sm">
                     69 Road off kachala street, opp shoprite Lagos state.
                   </p>
                   <div className="flex items-center">
@@ -246,7 +246,7 @@ function Center() {
                      
                     </div>
                     <div className='flex justify-end text-sm '>
-                      <button className='p-2  bg-[#FF8B1F] text-white'>View</button>
+                      <button className='px-2 bg-[#FF8B1F] text-white text-sm rounded-lg '>View</button>
                     </div>
                   </div>
                   

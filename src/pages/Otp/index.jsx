@@ -64,7 +64,7 @@ const Otp = () => {
       `${formValues.input1}${formValues.input2}${formValues.input3}${formValues.input4}${formValues.input5}${formValues.input6}`
     );
     const response = await axios.post(
-      `http://spcf-api.onrender.com/confirm-account`,
+      `http://spcf-api.onrender.com/test/confirm-account`,
       code
     );
 
@@ -74,7 +74,7 @@ const Otp = () => {
     if (json.err) {
       setIsLoading(false);
       setError(json.err);
-      console.log("welcome");
+      console.log(json.err);
     }
     if (!json.err) {
       console.log("welcome");
@@ -86,7 +86,7 @@ const Otp = () => {
     <div>
       <section className=" min-h-screen flex flex-col items-center justify-center">
         {!success ? (
-          <div className="bg-[#F7F7F7]   shadow-xl w-[424px] p-5 items-center">
+          <div className="bg-[#F7F7F7]   shadow-xl w-full lg:w-[424px] p-5 items-center">
             <div className="md:w-full px-5">
               <div className="flex justify-center ">
                 <img
@@ -106,8 +106,9 @@ const Otp = () => {
                 onSubmit={handleSubmit}
               >
                 <div className="flex flex-row flex-wrap justify-center space-x-4">
+                  
                   <input
-                    className=" w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
+                    className=" w-8 mb-4 rounded border border-gray-200 p-2 text-center appearance-none bg-[#EEEEEE]"
                     type="number"
                     maxLength="1"
                     name="input1"
@@ -116,7 +117,7 @@ const Otp = () => {
                     onChange={handleInputChange}
                   />
                   <input
-                    className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
+                    className="w-8 mb-4 rounded border border-gray-200 p-2 text-center appearance-none bg-[#EEEEEE]"
                     type="number"
                     maxLength="1"
                     name="input2"
@@ -125,7 +126,7 @@ const Otp = () => {
                     onChange={handleInputChange}
                   />
                   <input
-                    className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
+                    className="w-8 mb-4 rounded border border-gray-200 p-2 text-center appearance-none bg-[#EEEEEE]"
                     type="number"
                     maxLength="1"
                     name="input3"
@@ -134,7 +135,7 @@ const Otp = () => {
                     onChange={handleInputChange}
                   />
                   <input
-                    className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
+                    className="w-8 mb-4 rounded border border-gray-200 p-2 text-center appearance-none bg-[#EEEEEE]"
                     type="number"
                     maxLength="1"
                     name="input4"
@@ -143,7 +144,7 @@ const Otp = () => {
                     onChange={handleInputChange}
                   />
                   <input
-                    className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
+                    className="w-8 mb-4 rounded border border-gray-200 p-2 text-center appearance-none bg-[#EEEEEE]"
                     type="number"
                     maxLength="1"
                     name="input5"
@@ -152,7 +153,7 @@ const Otp = () => {
                     onChange={handleInputChange}
                   />
                   <input
-                    className="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none bg-[#EEEEEE]"
+                    className="w-8 mb-4 rounded border border-gray-200 p-2 text-center appearance-none bg-[#EEEEEE]"
                     type="number"
                     maxLength="1"
                     name="input6"

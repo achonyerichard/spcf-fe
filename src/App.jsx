@@ -31,8 +31,8 @@ function App() {
       <Route path="/career" element={<Career />} />
       <Route path="/centers" element={<Center />} />
       <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/otp" element={ <Otp /> } />
+      <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
+      <Route path="/otp" element={!user?.confirmed ? <Otp /> : <Navigate to="/register" />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/onboarding" element={<Onboarding />} />
       <Route path="/news" element={<News />} />
