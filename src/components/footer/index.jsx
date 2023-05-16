@@ -23,80 +23,80 @@ let year = d.getFullYear();
             <div className="px-4 w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
               <ul className="list-none footer-links space-y-6">
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="/about"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="/about"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     What we do
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="/"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     Testimonials
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="about"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     Schemes
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="about"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     FAQS
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="px-4 w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
               <ul className="list-none footer-links space-y-6">
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="about"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="about"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     Supports
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="about"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     Terms & Conditions
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-[#898989]"
+                  <Link
+                    to="about"
+                    className="border-b border-solid border-transparent hover:border-[#fcd733] hover:text-[#fcd733] text-[#898989]"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

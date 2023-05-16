@@ -34,11 +34,11 @@ const SuperMarket = () => {
         <section className="relative h-[489px] w-full flex items-center  text-left bg-cover bg-center bg-[url('../public/img/market-bg.png')] bg-blend-multiply bg-[#7D4007] bg-opacity-80 mb-20">
           <div className="px-4 sm:px-6 lg:px-8 z-10">
             <div className="text-left">
-              <h2 className="text-2xl tracking-tight md:leading-loose  md:text-6xl text-white sm:leading-none font-bold">
+              <h2 className="text-2xl tracking-tight leading-loose md:leading-tight  md:text-6xl text-white sm:leading-none font-bold">
                 SUPERMART <br />
                 STORE
               </h2>
-<p className="text-white nd:w-1/2 pt-5">The super-mart aims to provide basic food items for the less-privileged community people at subsidized prices for their nutritional benefit. We have a sustainable plan on ground that would cater for the local production of these local food items, and ensure that the poor do not starve due to lack of funds to purchase already expensive food items.</p>
+<p className="text-white md:w-1/2 pt-5">The super-mart aims to provide basic food items for the less-privileged community people at subsidized prices for their nutritional benefit. We have a sustainable plan on ground that would cater for the local production of these local food items, and ensure that the poor do not starve due to lack of funds to purchase already expensive food items.</p>
               {/* <div className="mt-5 sm:mt-8 sm:flex justify-center">
           <div className="rounded-md shadow">
             <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-regular rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:px-10">
